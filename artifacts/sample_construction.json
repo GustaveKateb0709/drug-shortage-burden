@@ -1,0 +1,111 @@
+{
+  "project": "paper18-drug-shortages-inequity",
+  "built_at_utc": "2026-09-16",
+  "source_files": {
+    "shortages": "drug-shortages-0001-of-0001.json",
+    "ndc": "drug-ndc-0001-of-0001.json",
+    "drugsfda": "drug-drugsfda-0001-of-0001.json",
+    "orangebook": "drug-orangebook-0001-of-0001.json"
+  },
+  "sample_construction_log": [
+    {
+      "step": "0. raw shortage records",
+      "n_records": 1607,
+      "note": ""
+    },
+    {
+      "step": "1. parsed (dates typed, openfda flattened)",
+      "n_records": 1607,
+      "note": "openfda non-empty: 1455"
+    },
+    {
+      "step": "1a. unparseable initial_posting_date (kept, flagged)",
+      "n_records": 1607,
+      "note": "n_bad=0"
+    },
+    {
+      "step": "1b. duplicate package_ndc (kept at record level, dedup on analysis unit later)",
+      "n_records": 1607,
+      "note": "dup_pkg=30"
+    },
+    {
+      "step": "B1. NDC products parsed",
+      "n_records": 137983,
+      "note": "human+otc all; filter Rx only below"
+    },
+    {
+      "step": "B2. NDC Rx products (marketing_category filter)",
+      "n_records": 65272,
+      "note": "OTC/others dropped: 72711"
+    },
+    {
+      "step": "B3. NDC Rx products active-or-active-in-window",
+      "n_records": 65272,
+      "note": "listing_expiration >= 2012-01-01 or missing"
+    },
+    {
+      "step": "B4. market-structure cells (ingredient_key, form) from NDC",
+      "n_records": 4817,
+      "note": ""
+    },
+    {
+      "step": "C1. Drugs@FDA products parsed",
+      "n_records": 51745,
+      "note": ""
+    },
+    {
+      "step": "C2. market-structure cells (ingredient_key, form) from Drugs@FDA",
+      "n_records": 4730,
+      "note": ""
+    },
+    {
+      "step": "D1. Orange Book product rows parsed",
+      "n_records": 48761,
+      "note": ""
+    },
+    {
+      "step": "D2. Orange Book Rx rows",
+      "n_records": 24757,
+      "note": ""
+    }
+  ],
+  "status_distribution": {
+    "Current": 1155,
+    "To Be Discontinued": 445,
+    "Resolved": 7
+  },
+  "date_range": [
+    "2012-01-01",
+    "2026-09-11"
+  ],
+  "coverage": {
+    "n_shortage_records": 1607,
+    "R1_product_ndc": 1421,
+    "R2_application_number": 0,
+    "R3_ingredient_form": 133,
+    "covered_total": 1554,
+    "coverage_rate": 0.967,
+    "uncovered_diagnostics": {
+      "n_uncovered": 53,
+      "openfda_empty": 24,
+      "status_dist": {
+        "To Be Discontinued": 37,
+        "Current": 16
+      },
+      "form_dist_top10": {
+        "tablet": 18,
+        "suppository": 12,
+        "unspecified": 7,
+        "injection": 6,
+        "suspension": 5,
+        "powder": 4,
+        "capsule": 1
+      }
+    }
+  },
+  "join_strategy": [
+    "R1: openfda.product_ndc -> NDC directory product_ndc (exact)",
+    "R2: openfda.application_number -> Drugs@FDA / Orange Book application (normalized NDA/ANDA+6d)",
+    "R3: normalized ingredient (salt-stripped, form words stripped) + normalized dosage form -> NDC (ingredient, form) cell"
+  ]
+}

@@ -1,0 +1,1014 @@
+{
+  "H0_anchor": {
+    "A00-B99_D140only": {
+      "slope_per_1sd": 0.33487,
+      "se": 0.06513,
+      "p": 0.0,
+      "n_states": 51
+    },
+    "G00-G98_D140only": {
+      "slope_per_1sd": -1.00483,
+      "se": 0.40718,
+      "p": 0.01713,
+      "n_states": 51
+    },
+    "F01-F99_D76_17_19": {
+      "slope_per_1sd": -5.00163,
+      "se": 1.30881,
+      "p": 0.00037,
+      "n_states": 51
+    },
+    "L00-L98_D76_17_19": {
+      "slope_per_1sd": -0.08062,
+      "se": 0.05999,
+      "p": 0.18591,
+      "n_states": 46
+    },
+    "M00-M99_D76_17_19": {
+      "slope_per_1sd": -0.33281,
+      "se": 0.10292,
+      "p": 0.00219,
+      "n_states": 51
+    }
+  },
+  "H1_mnar_envelope": [
+    {
+      "chapter": "A00-B99",
+      "window": "2003-2016 (D140)",
+      "slope_available_case": 0.335,
+      "p_available_case": 0.0,
+      "slope_下界(sup=0)": 0.231,
+      "p_下界(sup=0)": 0.0,
+      "slope_上界(sup=9例)": 0.218,
+      "p_上界(sup=9例)": 0.0001,
+      "slope_中位(章节年均值)": 0.269,
+      "p_中位(章节年均值)": 0.0,
+      "suppressed_share": 0.2064,
+      "包络含0(符号可翻转)": false,
+      "available_case与包络符号一致": true
+    },
+    {
+      "chapter": "C00-D48",
+      "window": "2003-2016 (D140)",
+      "slope_available_case": 0.016,
+      "p_available_case": 0.8694,
+      "slope_下界(sup=0)": 0.102,
+      "p_下界(sup=0)": 0.2577,
+      "slope_上界(sup=9例)": 0.087,
+      "p_上界(sup=9例)": 0.3296,
+      "slope_中位(章节年均值)": 0.014,
+      "p_中位(章节年均值)": 0.8743,
+      "suppressed_share": 0.0513,
+      "包络含0(符号可翻转)": false,
+      "available_case与包络符号一致": true
+    },
+    {
+      "chapter": "D50-D89",
+      "window": "2003-2016 (D140)",
+      "slope_available_case": 0.04,
+      "p_available_case": 0.4453,
+      "slope_下界(sup=0)": 0.108,
+      "p_下界(sup=0)": 0.0805,
+      "slope_上界(sup=9例)": 0.04,
+      "p_上界(sup=9例)": 0.3965,
+      "slope_中位(章节年均值)": 0.029,
+      "p_中位(章节年均值)": 0.5322,
+      "suppressed_share": 0.07,
+      "包络含0(符号可翻转)": false,
+      "available_case与包络符号一致": true
+    },
+    {
+      "chapter": "E00-E88",
+      "window": "2003-2016 (D140)",
+      "slope_available_case": -0.336,
+      "p_available_case": 0.3657,
+      "slope_下界(sup=0)": 0.313,
+      "p_下界(sup=0)": 0.1133,
+      "slope_上界(sup=9例)": 0.259,
+      "p_上界(sup=9例)": 0.1906,
+      "slope_中位(章节年均值)": -0.112,
+      "p_中位(章节年均值)": 0.6279,
+      "suppressed_share": 0.2923,
+      "包络含0(符号可翻转)": false,
+      "available_case与包络符号一致": false
+    },
+    {
+      "chapter": "G00-G98",
+      "window": "2003-2016 (D140)",
+      "slope_available_case": -1.005,
+      "p_available_case": 0.0171,
+      "slope_下界(sup=0)": -0.187,
+      "p_下界(sup=0)": 0.5578,
+      "slope_上界(sup=9例)": -0.218,
+      "p_上界(sup=9例)": 0.4906,
+      "slope_中位(章节年均值)": -0.726,
+      "p_中位(章节年均值)": 0.0387,
+      "suppressed_share": 0.1657,
+      "包络含0(符号可翻转)": false,
+      "available_case与包络符号一致": true
+    },
+    {
+      "chapter": "I00-I99",
+      "window": "2003-2016 (D140)",
+      "slope_available_case": 0.449,
+      "p_available_case": 0.2076,
+      "slope_下界(sup=0)": 0.939,
+      "p_下界(sup=0)": 0.0011,
+      "slope_上界(sup=9例)": 0.909,
+      "p_上界(sup=9例)": 0.0014,
+      "slope_中位(章节年均值)": 0.44,
+      "p_中位(章节年均值)": 0.1635,
+      "suppressed_share": 0.0772,
+      "包络含0(符号可翻转)": false,
+      "available_case与包络符号一致": true
+    },
+    {
+      "chapter": "J00-J98",
+      "window": "2003-2016 (D140)",
+      "slope_available_case": -0.167,
+      "p_available_case": 0.4848,
+      "slope_下界(sup=0)": 0.1,
+      "p_下界(sup=0)": 0.53,
+      "slope_上界(sup=9例)": 0.06,
+      "p_上界(sup=9例)": 0.7042,
+      "slope_中位(章节年均值)": -0.138,
+      "p_中位(章节年均值)": 0.4483,
+      "suppressed_share": 0.2218,
+      "包络含0(符号可翻转)": false,
+      "available_case与包络符号一致": false
+    },
+    {
+      "chapter": "K00-K92",
+      "window": "2003-2016 (D140)",
+      "slope_available_case": 0.028,
+      "p_available_case": 0.7948,
+      "slope_下界(sup=0)": 0.158,
+      "p_下界(sup=0)": 0.0036,
+      "slope_上界(sup=9例)": 0.11,
+      "p_上界(sup=9例)": 0.0716,
+      "slope_中位(章节年均值)": 0.064,
+      "p_中位(章节年均值)": 0.3723,
+      "suppressed_share": 0.1753,
+      "包络含0(符号可翻转)": false,
+      "available_case与包络符号一致": true
+    },
+    {
+      "chapter": "N00-N98",
+      "window": "2003-2016 (D140)",
+      "slope_available_case": 0.527,
+      "p_available_case": 0.0473,
+      "slope_下界(sup=0)": 0.222,
+      "p_下界(sup=0)": 0.016,
+      "slope_上界(sup=9例)": 0.163,
+      "p_上界(sup=9例)": 0.0594,
+      "slope_中位(章节年均值)": 0.144,
+      "p_中位(章节年均值)": 0.2255,
+      "suppressed_share": 0.4628,
+      "包络含0(符号可翻转)": false,
+      "available_case与包络符号一致": true
+    },
+    {
+      "chapter": "F01-F99",
+      "window": "2017-2019 (D76)",
+      "slope_available_case": -5.002,
+      "p_available_case": 0.0004,
+      "slope_下界(sup=0)": -5.002,
+      "p_下界(sup=0)": 0.0004,
+      "slope_上界(sup=9例)": -5.002,
+      "p_上界(sup=9例)": 0.0004,
+      "slope_中位(章节年均值)": -5.002,
+      "p_中位(章节年均值)": 0.0004,
+      "suppressed_share": 0.0,
+      "包络含0(符号可翻转)": false,
+      "available_case与包络符号一致": true
+    },
+    {
+      "chapter": "L00-L98",
+      "window": "2017-2019 (D76)",
+      "slope_available_case": -0.081,
+      "p_available_case": 0.1859,
+      "slope_下界(sup=0)": -0.031,
+      "p_下界(sup=0)": 0.6701,
+      "slope_上界(sup=9例)": -0.068,
+      "p_上界(sup=9例)": 0.255,
+      "slope_中位(章节年均值)": -0.075,
+      "p_中位(章节年均值)": 0.1962,
+      "suppressed_share": 0.0196,
+      "包络含0(符号可翻转)": false,
+      "available_case与包络符号一致": true
+    },
+    {
+      "chapter": "M00-M99",
+      "window": "2017-2019 (D76)",
+      "slope_available_case": -0.333,
+      "p_available_case": 0.0022,
+      "slope_下界(sup=0)": -0.333,
+      "p_下界(sup=0)": 0.0022,
+      "slope_上界(sup=9例)": -0.333,
+      "p_上界(sup=9例)": 0.0022,
+      "slope_中位(章节年均值)": -0.333,
+      "p_中位(章节年均值)": 0.0022,
+      "suppressed_share": 0.0,
+      "包络含0(符号可翻转)": false,
+      "available_case与包络符号一致": true
+    },
+    {
+      "chapter": "C00-D48",
+      "window": "2017-2019 (D76)",
+      "slope_available_case": 0.959,
+      "p_available_case": 0.6313,
+      "slope_下界(sup=0)": 0.959,
+      "p_下界(sup=0)": 0.6313,
+      "slope_上界(sup=9例)": 0.959,
+      "p_上界(sup=9例)": 0.6313,
+      "slope_中位(章节年均值)": 0.959,
+      "p_中位(章节年均值)": 0.6313,
+      "suppressed_share": 0.0,
+      "包络含0(符号可翻转)": false,
+      "available_case与包络符号一致": true
+    },
+    {
+      "chapter": "I00-I99",
+      "window": "2017-2019 (D76)",
+      "slope_available_case": 12.958,
+      "p_available_case": 0.0041,
+      "slope_下界(sup=0)": 12.958,
+      "p_下界(sup=0)": 0.0041,
+      "slope_上界(sup=9例)": 12.958,
+      "p_上界(sup=9例)": 0.0041,
+      "slope_中位(章节年均值)": 12.958,
+      "p_中位(章节年均值)": 0.0041,
+      "suppressed_share": 0.0,
+      "包络含0(符号可翻转)": false,
+      "available_case与包络符号一致": true
+    }
+  ],
+  "H2_state_subsets": [
+    {
+      "chapter": "A00-B99",
+      "window": "2003-2016",
+      "slope_基准": 0.335,
+      "p_基准": 0.0,
+      "slope_剔最小10州": 0.274,
+      "p_剔最小10州": 0.0001,
+      "slope_剔屏蔽率最高10州": 0.316,
+      "p_剔屏蔽率最高10州": 0.0001,
+      "slope_LOO_min": 0.31,
+      "slope_LOO_max": 0.355,
+      "LOO_越零": false
+    },
+    {
+      "chapter": "G00-G98",
+      "window": "2003-2016",
+      "slope_基准": -1.005,
+      "p_基准": 0.0171,
+      "slope_剔最小10州": -0.644,
+      "p_剔最小10州": 0.1763,
+      "slope_剔屏蔽率最高10州": -0.827,
+      "p_剔屏蔽率最高10州": 0.1011,
+      "slope_LOO_min": -1.149,
+      "slope_LOO_max": -0.861,
+      "LOO_越零": false
+    },
+    {
+      "chapter": "F01-F99",
+      "window": "2017-2019",
+      "slope_基准": -5.002,
+      "p_基准": 0.0004,
+      "slope_剔最小10州": -6.09,
+      "p_剔最小10州": 0.0,
+      "slope_剔屏蔽率最高10州": -5.306,
+      "p_剔屏蔽率最高10州": 0.0013,
+      "slope_LOO_min": -5.467,
+      "slope_LOO_max": -4.501,
+      "LOO_越零": false
+    },
+    {
+      "chapter": "M00-M99",
+      "window": "2017-2019",
+      "slope_基准": -0.333,
+      "p_基准": 0.0022,
+      "slope_剔最小10州": -0.177,
+      "p_剔最小10州": 0.0863,
+      "slope_剔屏蔽率最高10州": -0.449,
+      "p_剔屏蔽率最高10州": 0.0002,
+      "slope_LOO_min": -0.387,
+      "slope_LOO_max": -0.284,
+      "LOO_越零": false
+    },
+    {
+      "chapter": "N00-N98",
+      "window": "2003-2016",
+      "slope_基准": 0.527,
+      "p_基准": 0.0473,
+      "slope_剔最小10州": 0.4,
+      "p_剔最小10州": 0.1956,
+      "slope_剔屏蔽率最高10州": 0.297,
+      "p_剔屏蔽率最高10州": 0.2626,
+      "slope_LOO_min": 0.349,
+      "slope_LOO_max": 0.623,
+      "LOO_越零": false
+    }
+  ],
+  "H3_perm_svi": [
+    {
+      "chapter": "A00-B99",
+      "window": "2003-2016",
+      "slope": 0.335,
+      "OLS_p": 0.0,
+      "置换p(双侧)": 0.0,
+      "B": 1000
+    },
+    {
+      "chapter": "G00-G98",
+      "window": "2003-2016",
+      "slope": -1.005,
+      "OLS_p": 0.0171,
+      "置换p(双侧)": 0.017,
+      "B": 1000
+    },
+    {
+      "chapter": "F01-F99",
+      "window": "2017-2019",
+      "slope": -5.002,
+      "OLS_p": 0.0004,
+      "置换p(双侧)": 0.001,
+      "B": 1000
+    },
+    {
+      "chapter": "M00-M99",
+      "window": "2017-2019",
+      "slope": -0.333,
+      "OLS_p": 0.0022,
+      "置换p(双侧)": 0.0,
+      "B": 1000
+    },
+    {
+      "chapter": "N00-N98",
+      "window": "2003-2016",
+      "slope": 0.527,
+      "OLS_p": 0.0473,
+      "置换p(双侧)": 0.046,
+      "B": 1000
+    }
+  ],
+  "H4_weighting": [
+    {
+      "chapter": "A00-B99",
+      "window": "2003-2016",
+      "非加权(主口径)": 0.335,
+      "p_非加权": 0.0,
+      "人口加权WLS": 0.16,
+      "p_WLS": 0.0232,
+      "完全州slope": NaN,
+      "完全州p": NaN,
+      "n_完全州": 0
+    },
+    {
+      "chapter": "G00-G98",
+      "window": "2003-2016",
+      "非加权(主口径)": -1.005,
+      "p_非加权": 0.0171,
+      "人口加权WLS": -0.703,
+      "p_WLS": 0.1542,
+      "完全州slope": -0.024,
+      "完全州p": 0.9797,
+      "n_完全州": 10
+    },
+    {
+      "chapter": "F01-F99",
+      "window": "2017-2019",
+      "非加权(主口径)": -5.002,
+      "p_非加权": 0.0004,
+      "人口加权WLS": -8.556,
+      "p_WLS": 0.0,
+      "完全州slope": -5.002,
+      "完全州p": 0.0004,
+      "n_完全州": 51
+    },
+    {
+      "chapter": "M00-M99",
+      "window": "2017-2019",
+      "非加权(主口径)": -0.333,
+      "p_非加权": 0.0022,
+      "人口加权WLS": -0.361,
+      "p_WLS": 0.0002,
+      "完全州slope": -0.333,
+      "完全州p": 0.0022,
+      "n_完全州": 51
+    },
+    {
+      "chapter": "N00-N98",
+      "window": "2003-2016",
+      "非加权(主口径)": 0.527,
+      "p_非加权": 0.0473,
+      "人口加权WLS": -0.395,
+      "p_WLS": 0.1783,
+      "完全州slope": NaN,
+      "完全州p": NaN,
+      "n_完全州": 0
+    }
+  ],
+  "H5_yearly": [
+    {
+      "chapter": "F01-F99",
+      "数据源": "D76",
+      "year": 2017,
+      "slope_per_1sd": -4.818,
+      "p": 0.0004,
+      "n": 51
+    },
+    {
+      "chapter": "F01-F99",
+      "数据源": "D76",
+      "year": 2018,
+      "slope_per_1sd": -4.883,
+      "p": 0.0006,
+      "n": 51
+    },
+    {
+      "chapter": "F01-F99",
+      "数据源": "D76",
+      "year": 2019,
+      "slope_per_1sd": -5.304,
+      "p": 0.0004,
+      "n": 51
+    },
+    {
+      "chapter": "M00-M99",
+      "数据源": "D76",
+      "year": 2017,
+      "slope_per_1sd": -0.347,
+      "p": 0.0044,
+      "n": 51
+    },
+    {
+      "chapter": "M00-M99",
+      "数据源": "D76",
+      "year": 2018,
+      "slope_per_1sd": -0.388,
+      "p": 0.001,
+      "n": 51
+    },
+    {
+      "chapter": "M00-M99",
+      "数据源": "D76",
+      "year": 2019,
+      "slope_per_1sd": -0.264,
+      "p": 0.0319,
+      "n": 51
+    },
+    {
+      "chapter": "L00-L98",
+      "数据源": "D76",
+      "year": 2017,
+      "slope_per_1sd": -0.043,
+      "p": 0.437,
+      "n": 45
+    },
+    {
+      "chapter": "L00-L98",
+      "数据源": "D76",
+      "year": 2018,
+      "slope_per_1sd": -0.085,
+      "p": 0.1982,
+      "n": 44
+    },
+    {
+      "chapter": "L00-L98",
+      "数据源": "D76",
+      "year": 2019,
+      "slope_per_1sd": -0.101,
+      "p": 0.1421,
+      "n": 43
+    },
+    {
+      "chapter": "G00-G98",
+      "数据源": "D140",
+      "year": 2003,
+      "slope_per_1sd": -0.959,
+      "p": 0.0579,
+      "n": 51
+    },
+    {
+      "chapter": "G00-G98",
+      "数据源": "D140",
+      "year": 2006,
+      "slope_per_1sd": -1.108,
+      "p": 0.0284,
+      "n": 51
+    },
+    {
+      "chapter": "G00-G98",
+      "数据源": "D140",
+      "year": 2009,
+      "slope_per_1sd": -1.32,
+      "p": 0.0082,
+      "n": 51
+    },
+    {
+      "chapter": "G00-G98",
+      "数据源": "D140",
+      "year": 2012,
+      "slope_per_1sd": -1.212,
+      "p": 0.0452,
+      "n": 51
+    },
+    {
+      "chapter": "G00-G98",
+      "数据源": "D140",
+      "year": 2015,
+      "slope_per_1sd": -0.088,
+      "p": 0.8933,
+      "n": 51
+    },
+    {
+      "chapter": "G00-G98",
+      "数据源": "D140",
+      "year": "2003-2006",
+      "slope_per_1sd": -1.072,
+      "p": 0.0119,
+      "n": 51
+    },
+    {
+      "chapter": "G00-G98",
+      "数据源": "D140",
+      "year": "2007-2010",
+      "slope_per_1sd": -1.36,
+      "p": 0.003,
+      "n": 51
+    },
+    {
+      "chapter": "G00-G98",
+      "数据源": "D140",
+      "year": "2011-2014",
+      "slope_per_1sd": -1.029,
+      "p": 0.0245,
+      "n": 51
+    },
+    {
+      "chapter": "G00-G98",
+      "数据源": "D140",
+      "year": "2013-2016",
+      "slope_per_1sd": -0.454,
+      "p": 0.3569,
+      "n": 51
+    },
+    {
+      "chapter": "F01-F99",
+      "数据源": "D76",
+      "year": 2020,
+      "slope_per_1sd": -5.771,
+      "p": 0.0001,
+      "n": 51
+    },
+    {
+      "chapter": "M00-M99",
+      "数据源": "D76",
+      "year": 2020,
+      "slope_per_1sd": -0.174,
+      "p": 0.1934,
+      "n": 51
+    },
+    {
+      "chapter": "G00-G98",
+      "数据源": "D76",
+      "year": 2020,
+      "slope_per_1sd": 3.422,
+      "p": 0.079,
+      "n": 51
+    }
+  ],
+  "H6_equityrank_alt": [
+    {
+      "category": "Cardiovascular",
+      "chapter": "I00-I99",
+      "n_units": 56,
+      "annual_deaths": 821545.0,
+      "slope_aar": 0.4495,
+      "slope_p": 0.2076,
+      "comp_基准乘积": 20678773.5762,
+      "comp_等权z": 1.568,
+      "comp_秩和": 10.6667,
+      "comp_不含单元数": 369263.8139,
+      "rank_comp_基准乘积": 1,
+      "rank_comp_等权z": 1,
+      "rank_comp_秩和": 1,
+      "rank_comp_不含单元数": 1
+    },
+    {
+      "category": "Anti-Infective",
+      "chapter": "A00-B99",
+      "n_units": 48,
+      "annual_deaths": 67762.0,
+      "slope_aar": 0.3349,
+      "slope_p": 0.0,
+      "comp_基准乘积": 1089175.1627,
+      "comp_等权z": 0.6557,
+      "comp_秩和": 8.0,
+      "comp_不含单元数": 22691.1492,
+      "rank_comp_基准乘积": 2,
+      "rank_comp_等权z": 2,
+      "rank_comp_秩和": 3,
+      "rank_comp_不含单元数": 3
+    },
+    {
+      "category": "Oncology",
+      "chapter": "C00-D48",
+      "n_units": 45,
+      "annual_deaths": 588124.0,
+      "slope_aar": 0.0156,
+      "slope_p": 0.8694,
+      "comp_基准乘积": 412034.4758,
+      "comp_等权z": 0.5707,
+      "comp_秩和": 8.3333,
+      "comp_不含单元数": 9156.3217,
+      "rank_comp_基准乘积": 3,
+      "rank_comp_等权z": 3,
+      "rank_comp_秩和": 2,
+      "rank_comp_不含单元数": 4
+    },
+    {
+      "category": "Urology",
+      "chapter": "N00-N98",
+      "n_units": 2,
+      "annual_deaths": 47514.0,
+      "slope_aar": 0.5273,
+      "slope_p": 0.0473,
+      "comp_基准乘积": 50110.5607,
+      "comp_等权z": 0.1279,
+      "comp_秩和": 5.5,
+      "comp_不含单元数": 25055.2803,
+      "rank_comp_基准乘积": 4,
+      "rank_comp_等权z": 5,
+      "rank_comp_秩和": 6,
+      "rank_comp_不含单元数": 2
+    },
+    {
+      "category": "Gastroenterology",
+      "chapter": "K00-K92",
+      "n_units": 16,
+      "annual_deaths": 41004.0,
+      "slope_aar": 0.0284,
+      "slope_p": 0.7948,
+      "comp_基准乘积": 18663.2295,
+      "comp_等权z": -0.5168,
+      "comp_秩和": 5.3333,
+      "comp_不含单元数": 1166.4518,
+      "rank_comp_基准乘积": 5,
+      "rank_comp_等权z": 9,
+      "rank_comp_秩和": 8,
+      "rank_comp_不含单元数": 5
+    },
+    {
+      "category": "Psychiatry",
+      "chapter": "F01-F99",
+      "n_units": 44,
+      "annual_deaths": 135052.0,
+      "slope_aar": -5.0016,
+      "slope_p": 0.0004,
+      "comp_基准乘积": 0.0,
+      "comp_等权z": 0.1831,
+      "comp_秩和": 6.1667,
+      "comp_不含单元数": 0.0,
+      "rank_comp_基准乘积": 8,
+      "rank_comp_等权z": 4,
+      "rank_comp_秩和": 4,
+      "rank_comp_不含单元数": 8
+    },
+    {
+      "category": "Neurology",
+      "chapter": "G00-G98",
+      "n_units": 27,
+      "annual_deaths": 106271.0,
+      "slope_aar": -1.0048,
+      "slope_p": 0.0171,
+      "comp_基准乘积": 0.0,
+      "comp_等权z": -0.1578,
+      "comp_秩和": 5.5,
+      "comp_不含单元数": 0.0,
+      "rank_comp_基准乘积": 8,
+      "rank_comp_等权z": 7,
+      "rank_comp_秩和": 6,
+      "rank_comp_不含单元数": 8
+    },
+    {
+      "category": "Endocrinology/Metabolism",
+      "chapter": "E00-E88",
+      "n_units": 46,
+      "annual_deaths": 77208.0,
+      "slope_aar": -0.3363,
+      "slope_p": 0.3657,
+      "comp_基准乘积": 0.0,
+      "comp_等权z": 0.0857,
+      "comp_秩和": 6.1667,
+      "comp_不含单元数": 0.0,
+      "rank_comp_基准乘积": 8,
+      "rank_comp_等权z": 6,
+      "rank_comp_秩和": 4,
+      "rank_comp_不含单元数": 8
+    },
+    {
+      "category": "Pulmonary/Allergy",
+      "chapter": "J00-J98",
+      "n_units": 6,
+      "annual_deaths": 244478.0,
+      "slope_aar": -0.1665,
+      "slope_p": 0.4848,
+      "comp_基准乘积": 0.0,
+      "comp_等权z": -0.3146,
+      "comp_秩和": 5.1667,
+      "comp_不含单元数": 0.0,
+      "rank_comp_基准乘积": 8,
+      "rank_comp_等权z": 8,
+      "rank_comp_秩和": 9,
+      "rank_comp_不含单元数": 8
+    },
+    {
+      "category": "Dermatology",
+      "chapter": "L00-L98",
+      "n_units": 10,
+      "annual_deaths": 5137.0,
+      "slope_aar": -0.0806,
+      "slope_p": 0.1859,
+      "comp_基准乘积": 0.0,
+      "comp_等权z": -1.1518,
+      "comp_秩和": 2.8333,
+      "comp_不含单元数": 0.0,
+      "rank_comp_基准乘积": 8,
+      "rank_comp_等权z": 11,
+      "rank_comp_秩和": 10,
+      "rank_comp_不含单元数": 8
+    },
+    {
+      "category": "Musculoskeletal",
+      "chapter": "M00-M99",
+      "n_units": 2,
+      "annual_deaths": 14060.0,
+      "slope_aar": -0.3328,
+      "slope_p": 0.0022,
+      "comp_基准乘积": 0.0,
+      "comp_等权z": -1.0501,
+      "comp_秩和": 2.3333,
+      "comp_不含单元数": 0.0,
+      "rank_comp_基准乘积": 8,
+      "rank_comp_等权z": 10,
+      "rank_comp_秩和": 11,
+      "rank_comp_不含单元数": 8
+    }
+  ],
+  "H7_crude_vs_aar": [
+    {
+      "chapter": "A00-B99",
+      "window": "2003-2016 (D140)",
+      "slope_crude_per_1sd": 0.72,
+      "slope_crude_p": 0.4394,
+      "slope_aar_per_1sd": 0.335,
+      "slope_aar_p": 0.0,
+      "sign_flip": false,
+      "|AAR|/|crude|": 0.465,
+      "判定": "大幅收窄(年龄混杂主导)"
+    },
+    {
+      "chapter": "C00-D48",
+      "window": "2003-2016 (D140)",
+      "slope_crude_per_1sd": -11.42,
+      "slope_crude_p": 0.0116,
+      "slope_aar_per_1sd": 0.016,
+      "slope_aar_p": 0.8694,
+      "sign_flip": true,
+      "|AAR|/|crude|": 0.001,
+      "判定": "大幅收窄(年龄混杂主导)"
+    },
+    {
+      "chapter": "D50-D89",
+      "window": "2003-2016 (D140)",
+      "slope_crude_per_1sd": -0.17,
+      "slope_crude_p": 0.0148,
+      "slope_aar_per_1sd": 0.04,
+      "slope_aar_p": 0.4453,
+      "sign_flip": true,
+      "|AAR|/|crude|": 0.235,
+      "判定": "大幅收窄(年龄混杂主导)"
+    },
+    {
+      "chapter": "E00-E88",
+      "window": "2003-2016 (D140)",
+      "slope_crude_per_1sd": -0.64,
+      "slope_crude_p": 0.3746,
+      "slope_aar_per_1sd": -0.336,
+      "slope_aar_p": 0.3657,
+      "sign_flip": false,
+      "|AAR|/|crude|": 0.525,
+      "判定": "收窄"
+    },
+    {
+      "chapter": "G00-G98",
+      "window": "2003-2016 (D140)",
+      "slope_crude_per_1sd": -2.16,
+      "slope_crude_p": 0.0698,
+      "slope_aar_per_1sd": -1.005,
+      "slope_aar_p": 0.0171,
+      "sign_flip": false,
+      "|AAR|/|crude|": 0.465,
+      "判定": "大幅收窄(年龄混杂主导)"
+    },
+    {
+      "chapter": "I00-I99",
+      "window": "2003-2016 (D140)",
+      "slope_crude_per_1sd": -8.9,
+      "slope_crude_p": 0.2167,
+      "slope_aar_per_1sd": 0.449,
+      "slope_aar_p": 0.2076,
+      "sign_flip": true,
+      "|AAR|/|crude|": 0.05,
+      "判定": "大幅收窄(年龄混杂主导)"
+    },
+    {
+      "chapter": "J00-J98",
+      "window": "2003-2016 (D140)",
+      "slope_crude_per_1sd": -5.69,
+      "slope_crude_p": 0.0118,
+      "slope_aar_per_1sd": -0.167,
+      "slope_aar_p": 0.4848,
+      "sign_flip": false,
+      "|AAR|/|crude|": 0.029,
+      "判定": "大幅收窄(年龄混杂主导)"
+    },
+    {
+      "chapter": "K00-K92",
+      "window": "2003-2016 (D140)",
+      "slope_crude_per_1sd": 1.06,
+      "slope_crude_p": 0.0017,
+      "slope_aar_per_1sd": 0.028,
+      "slope_aar_p": 0.7948,
+      "sign_flip": false,
+      "|AAR|/|crude|": 0.026,
+      "判定": "大幅收窄(年龄混杂主导)"
+    },
+    {
+      "chapter": "N00-N98",
+      "window": "2003-2016 (D140)",
+      "slope_crude_per_1sd": -1.36,
+      "slope_crude_p": 0.0808,
+      "slope_aar_per_1sd": 0.527,
+      "slope_aar_p": 0.0473,
+      "sign_flip": true,
+      "|AAR|/|crude|": 0.388,
+      "判定": "大幅收窄(年龄混杂主导)"
+    },
+    {
+      "chapter": "F01-F99",
+      "window": "2017-2019 (D76)",
+      "slope_crude_per_1sd": -12.36,
+      "slope_crude_p": 0.0,
+      "slope_aar_per_1sd": -5.002,
+      "slope_aar_p": 0.0004,
+      "sign_flip": false,
+      "|AAR|/|crude|": 0.405,
+      "判定": "大幅收窄(年龄混杂主导)"
+    },
+    {
+      "chapter": "L00-L98",
+      "window": "2017-2019 (D76)",
+      "slope_crude_per_1sd": -0.2,
+      "slope_crude_p": 0.0011,
+      "slope_aar_per_1sd": -0.081,
+      "slope_aar_p": 0.1859,
+      "sign_flip": false,
+      "|AAR|/|crude|": 0.405,
+      "判定": "大幅收窄(年龄混杂主导)"
+    },
+    {
+      "chapter": "M00-M99",
+      "window": "2017-2019 (D76)",
+      "slope_crude_per_1sd": -0.6,
+      "slope_crude_p": 0.0,
+      "slope_aar_per_1sd": -0.333,
+      "slope_aar_p": 0.0022,
+      "sign_flip": false,
+      "|AAR|/|crude|": 0.555,
+      "判定": "收窄"
+    },
+    {
+      "chapter": "C00-D48",
+      "window": "2017-2019 (D76)",
+      "slope_crude_per_1sd": -11.08,
+      "slope_crude_p": 0.0121,
+      "slope_aar_per_1sd": 0.959,
+      "slope_aar_p": 0.6313,
+      "sign_flip": true,
+      "|AAR|/|crude|": 0.087,
+      "判定": "大幅收窄(年龄混杂主导)"
+    },
+    {
+      "chapter": "I00-I99",
+      "window": "2017-2019 (D76)",
+      "slope_crude_per_1sd": -7.68,
+      "slope_crude_p": 0.2883,
+      "slope_aar_per_1sd": 12.958,
+      "slope_aar_p": 0.0041,
+      "sign_flip": true,
+      "|AAR|/|crude|": 1.687,
+      "判定": "符号翻转"
+    }
+  ],
+  "H8_2020_consistency": [
+    {
+      "chapter": "A00-B99",
+      "主窗slope": 0.335,
+      "主窗p": 0.0,
+      "2020slope": 1.636,
+      "2020p": 0.0074,
+      "符号一致": true
+    },
+    {
+      "chapter": "C00-D48",
+      "主窗slope": 0.016,
+      "主窗p": 0.8694,
+      "2020slope": 0.071,
+      "2020p": 0.9716,
+      "符号一致": true
+    },
+    {
+      "chapter": "D50-D89",
+      "主窗slope": 0.04,
+      "主窗p": 0.4453,
+      "2020slope": -0.03,
+      "2020p": 0.7556,
+      "符号一致": false
+    },
+    {
+      "chapter": "E00-E88",
+      "主窗slope": -0.336,
+      "主窗p": 0.3657,
+      "2020slope": 2.009,
+      "2020p": 0.0547,
+      "符号一致": false
+    },
+    {
+      "chapter": "F01-F99",
+      "主窗slope": -5.002,
+      "主窗p": 0.0004,
+      "2020slope": -5.771,
+      "2020p": 0.0001,
+      "符号一致": true
+    },
+    {
+      "chapter": "G00-G98",
+      "主窗slope": -1.005,
+      "主窗p": 0.0171,
+      "2020slope": 3.422,
+      "2020p": 0.079,
+      "符号一致": false
+    },
+    {
+      "chapter": "I00-I99",
+      "主窗slope": 0.449,
+      "主窗p": 0.2076,
+      "2020slope": 14.408,
+      "2020p": 0.0041,
+      "符号一致": true
+    },
+    {
+      "chapter": "J00-J98",
+      "主窗slope": -0.167,
+      "主窗p": 0.4848,
+      "2020slope": 2.354,
+      "2020p": 0.2451,
+      "符号一致": false
+    },
+    {
+      "chapter": "K00-K92",
+      "主窗slope": 0.028,
+      "主窗p": 0.7948,
+      "2020slope": -0.283,
+      "2020p": 0.782,
+      "符号一致": false
+    },
+    {
+      "chapter": "L00-L98",
+      "主窗slope": -0.081,
+      "主窗p": 0.1859,
+      "2020slope": -0.021,
+      "2020p": 0.7199,
+      "符号一致": true
+    },
+    {
+      "chapter": "M00-M99",
+      "主窗slope": -0.333,
+      "主窗p": 0.0022,
+      "2020slope": -0.174,
+      "2020p": 0.1934,
+      "符号一致": true
+    },
+    {
+      "chapter": "N00-N98",
+      "主窗slope": 0.527,
+      "主窗p": 0.0473,
+      "2020slope": 1.427,
+      "2020p": 0.0631,
+      "符号一致": true
+    }
+  ]
+}

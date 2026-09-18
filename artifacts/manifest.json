@@ -1,0 +1,38 @@
+{
+  "drug-shortages-0001-of-0001.json.zip": {
+    "url": "https://download.open.fda.gov/drug/shortages/drug-shortages-0001-of-0001.json.zip",
+    "download_date_utc": "2026-09-16",
+    "bytes": 449541,
+    "md5": "5e99149281fa71cec57ad2a6daec60d8"
+  },
+  "drug-orangebook-0001-of-0001.json.zip": {
+    "url": "https://download.open.fda.gov/drug/orangebook/drug-orangebook-0001-of-0001.json.zip",
+    "download_date_utc": "2026-09-16",
+    "bytes": 2458919,
+    "md5": "d0a499ed5403c9e1817d68e4781d63ad"
+  },
+  "drug-drugsfda-0001-of-0001.json.zip": {
+    "url": "https://download.open.fda.gov/drug/drugsfda/drug-drugsfda-0001-of-0001.json.zip",
+    "download_date_utc": "2026-09-16",
+    "bytes": 9406259,
+    "md5": "355211e58eb85494021279f6c1856b8e"
+  },
+  "drug-ndc-0001-of-0001.json.zip": {
+    "url": "https://download.open.fda.gov/drug/ndc/drug-ndc-0001-of-0001.json.zip",
+    "download_date_utc": "2026-09-16",
+    "bytes": 28185944,
+    "md5": "a9de445479ca099247e42334ceda9daf"
+  },
+  "SVI_2022_US_county.csv": {
+    "url": "https://svi2.cdc.gov/webapi/Documents/download?year=2022&type=csv&category=states_counties&name=SVI_2022_US_COUNTY",
+    "download_date_utc": "2026-09-16",
+    "bytes": 2301480,
+    "md5": "f06a43fbf0411c90057d9812f3a40bf2"
+  },
+  "SVI_2022_US_tracts.csv": {
+    "url": "https://svi2.cdc.gov/webapi/Documents/download?year=2022&type=csv&category=states&name=SVI_2022_US",
+    "download_date_utc": "2026-09-16",
+    "bytes": 61102059,
+    "md5": "53cc52b481df9ee7914a60ec0d582889"
+  }
+}

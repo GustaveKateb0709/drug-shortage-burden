@@ -1,0 +1,3567 @@
+{
+  "meta": {
+    "interpretation_lock": "受短缺影响的药物类别，其对应疾病负担在更脆弱的州系统性更集中（描述性）；短缺记录无地理信息，不可说'短缺打击脆弱州'",
+    "time_mismatches": [
+      "WONDER 止于 2020（主窗 2003-2019/2015-2019 用 D140；2020 留作敏感性）",
+      "SVI 仅 2022，解释 2003-2019 负担为跨期外推",
+      "短缺暴露有存量幸存者偏差（resolved 被删，进入率不可观测）"
+    ],
+    "suppression": "主分析 available-case 并报屏蔽比例；敏感性 = suppressed 记 0（下界）与记 9（上界）",
+    "audit_notes_phase4": [
+      "Anti-Infective 头条口径收窄：+0.22–0.34/SD（0.335=available-case 上界；人口加权 WLS +0.160, p=0.023；梯度部分由较小州驱动）；MNAR 包络不含 0，存活",
+      "Neurology 降级：方向为负但不稳健（2020 翻正、完全州≈0、包络含 0），不进主文；主文负梯度唯一代表 = Psychiatry（逐年全显著、0% 屏蔽）；Musculoskeletal 附录级谨慎",
+      "I00-I99 suppression-sensitive：available-case +0.45(p=0.21) vs 填补包络 [+0.91,+0.94](p≈0.001)；机制=屏蔽子行集中于低 SVI 小州(corr=-0.31)，本机复核成立；'Cardiovascular 无梯度'在论文中只能写'available-case 无显著梯度'",
+      "E00-E88(29%屏蔽)/J00-J98(22%屏蔽) available-case 符号在 MNAR 包络外（补全后转弱正），不可靠",
+      "2020 敏感性：A/F/M 主信号全保留（A +1.636 p=0.007、F -5.771 p=0.0001；M -0.174 p=0.19 衰减）",
+      "D76 I 章 2017-19 翻 +12.958 为唯一未收窄章节，从年龄混杂伪影叙述中明确排除，不作证据"
+    ],
+    "category_mapping": "11 个 review=false 直接映射类别（任务书口径 13，map policy 实际 11）",
+    "crude_rate_note": "无年龄调整数据，使用粗死亡率；梯度可能部分反映年龄构成差异"
+  },
+  "exposure": [
+    {
+      "first_cat": "Anti-Infective",
+      "n_units": 48,
+      "n_market_cells": 35,
+      "tbd_share": 0.6458333333333334,
+      "first_entry": "2015-02-17 00:00:00",
+      "last_entry": "2026-09-11 00:00:00",
+      "chapter": "A00-B99"
+    },
+    {
+      "first_cat": "Cardiovascular",
+      "n_units": 56,
+      "n_market_cells": 33,
+      "tbd_share": 0.44642857142857145,
+      "first_entry": "2017-10-25 00:00:00",
+      "last_entry": "2026-08-31 00:00:00",
+      "chapter": "I00-I99"
+    },
+    {
+      "first_cat": "Dermatology",
+      "n_units": 10,
+      "n_market_cells": 6,
+      "tbd_share": 0.5,
+      "first_entry": "2019-02-08 00:00:00",
+      "last_entry": "2026-07-23 00:00:00",
+      "chapter": "L00-L98"
+    },
+    {
+      "first_cat": "Endocrinology/Metabolism",
+      "n_units": 46,
+      "n_market_cells": 20,
+      "tbd_share": 0.43478260869565216,
+      "first_entry": "2016-02-03 00:00:00",
+      "last_entry": "2026-09-01 00:00:00",
+      "chapter": "E00-E88"
+    },
+    {
+      "first_cat": "Gastroenterology",
+      "n_units": 16,
+      "n_market_cells": 15,
+      "tbd_share": 0.625,
+      "first_entry": "2020-12-08 00:00:00",
+      "last_entry": "2026-08-25 00:00:00",
+      "chapter": "K00-K92"
+    },
+    {
+      "first_cat": "Musculoskeletal",
+      "n_units": 2,
+      "n_market_cells": 2,
+      "tbd_share": 1.0,
+      "first_entry": "2026-08-13 00:00:00",
+      "last_entry": "2026-08-31 00:00:00",
+      "chapter": "M00-M99"
+    },
+    {
+      "first_cat": "Neurology",
+      "n_units": 27,
+      "n_market_cells": 14,
+      "tbd_share": 0.37037037037037035,
+      "first_entry": "2018-05-03 00:00:00",
+      "last_entry": "2026-06-15 00:00:00",
+      "chapter": "G00-G98"
+    },
+    {
+      "first_cat": "Oncology",
+      "n_units": 45,
+      "n_market_cells": 21,
+      "tbd_share": 0.4666666666666667,
+      "first_entry": "2020-12-18 00:00:00",
+      "last_entry": "2026-08-27 00:00:00",
+      "chapter": "C00-D48"
+    },
+    {
+      "first_cat": "Psychiatry",
+      "n_units": 44,
+      "n_market_cells": 13,
+      "tbd_share": 0.13636363636363635,
+      "first_entry": "2022-10-12 00:00:00",
+      "last_entry": "2026-04-16 00:00:00",
+      "chapter": "F01-F99"
+    },
+    {
+      "first_cat": "Pulmonary/Allergy",
+      "n_units": 6,
+      "n_market_cells": 3,
+      "tbd_share": 0.3333333333333333,
+      "first_entry": "2023-11-03 00:00:00",
+      "last_entry": "2026-07-27 00:00:00",
+      "chapter": "J00-J98"
+    },
+    {
+      "first_cat": "Urology",
+      "n_units": 2,
+      "n_market_cells": 2,
+      "tbd_share": 1.0,
+      "first_entry": "2026-03-27 00:00:00",
+      "last_entry": "2026-08-31 00:00:00",
+      "chapter": "N00-N98"
+    }
+  ],
+  "gradient_main_2015_2019": [
+    {
+      "chapter": "A00-B99",
+      "window": "2015-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.1749,
+      "annual_deaths_avg": 68664.0,
+      "slope_per_1svi": -0.67,
+      "slope_se": 5.23,
+      "slope_p": 0.8993,
+      "slope_per_1sd": -0.11,
+      "slope_lo_bound": -0.67,
+      "slope_hi_bound": -1.05,
+      "rate_q1": 15.6,
+      "rate_q5": 19.1,
+      "q5_over_q1_ratio": 1.22,
+      "spearman_rho": 0.369
+    },
+    {
+      "chapter": "C00-D48",
+      "window": "2015-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0507,
+      "annual_deaths_avg": 614115.0,
+      "slope_per_1svi": -69.02,
+      "slope_se": 26.2,
+      "slope_p": 0.0113,
+      "slope_per_1sd": -11.27,
+      "slope_lo_bound": -69.02,
+      "slope_hi_bound": -69.37,
+      "rate_q1": 189.7,
+      "rate_q5": 174.8,
+      "q5_over_q1_ratio": 0.92,
+      "spearman_rho": -0.113
+    },
+    {
+      "chapter": "D50-D89",
+      "window": "2015-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0275,
+      "annual_deaths_avg": 8612.0,
+      "slope_per_1svi": -1.69,
+      "slope_se": 0.56,
+      "slope_p": 0.0042,
+      "slope_per_1sd": -0.28,
+      "slope_lo_bound": -1.69,
+      "slope_hi_bound": -1.72,
+      "rate_q1": 2.7,
+      "rate_q5": 2.2,
+      "q5_over_q1_ratio": 0.82,
+      "spearman_rho": -0.115
+    },
+    {
+      "chapter": "E00-E88",
+      "window": "2015-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.1874,
+      "annual_deaths_avg": 114400.0,
+      "slope_per_1svi": -7.14,
+      "slope_se": 5.9,
+      "slope_p": 0.2326,
+      "slope_per_1sd": -1.16,
+      "slope_lo_bound": -7.14,
+      "slope_hi_bound": -7.32,
+      "rate_q1": 35.7,
+      "rate_q5": 34.2,
+      "q5_over_q1_ratio": 0.96,
+      "spearman_rho": 0.028
+    },
+    {
+      "chapter": "G00-G98",
+      "window": "2015-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.1133,
+      "annual_deaths_avg": 192038.0,
+      "slope_per_1svi": -2.23,
+      "slope_se": 10.43,
+      "slope_p": 0.8314,
+      "slope_per_1sd": -0.36,
+      "slope_lo_bound": -2.23,
+      "slope_hi_bound": -2.36,
+      "rate_q1": 63.0,
+      "rate_q5": 60.5,
+      "q5_over_q1_ratio": 0.96,
+      "spearman_rho": -0.053
+    },
+    {
+      "chapter": "I00-I99",
+      "window": "2015-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0625,
+      "annual_deaths_avg": 855803.0,
+      "slope_per_1svi": -45.98,
+      "slope_se": 43.38,
+      "slope_p": 0.2943,
+      "slope_per_1sd": -7.51,
+      "slope_lo_bound": -45.98,
+      "slope_hi_bound": -46.38,
+      "rate_q1": 242.7,
+      "rate_q5": 249.8,
+      "q5_over_q1_ratio": 1.03,
+      "spearman_rho": 0.1
+    },
+    {
+      "chapter": "J00-J98",
+      "window": "2015-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.1914,
+      "annual_deaths_avg": 273727.0,
+      "slope_per_1svi": -39.18,
+      "slope_se": 16.63,
+      "slope_p": 0.0225,
+      "slope_per_1sd": -6.4,
+      "slope_lo_bound": -39.18,
+      "slope_hi_bound": -39.76,
+      "rate_q1": 83.5,
+      "rate_q5": 75.6,
+      "q5_over_q1_ratio": 0.9,
+      "spearman_rho": -0.127
+    },
+    {
+      "chapter": "K00-K92",
+      "window": "2015-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.1294,
+      "annual_deaths_avg": 85905.0,
+      "slope_per_1svi": -3.09,
+      "slope_se": 3.89,
+      "slope_p": 0.43,
+      "slope_per_1sd": -0.5,
+      "slope_lo_bound": -3.09,
+      "slope_hi_bound": -3.36,
+      "rate_q1": 27.2,
+      "rate_q5": 26.3,
+      "q5_over_q1_ratio": 0.96,
+      "spearman_rho": -0.073
+    },
+    {
+      "chapter": "N00-N98",
+      "window": "2015-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.3806,
+      "annual_deaths_avg": 63726.0,
+      "slope_per_1svi": -9.23,
+      "slope_se": 5.16,
+      "slope_p": 0.0798,
+      "slope_per_1sd": -1.51,
+      "slope_lo_bound": -9.23,
+      "slope_hi_bound": -9.88,
+      "rate_q1": 16.9,
+      "rate_q5": 16.9,
+      "q5_over_q1_ratio": 1.0,
+      "spearman_rho": 0.125
+    }
+  ],
+  "gradient_full_2003_2019": [
+    {
+      "chapter": "A00-B99",
+      "window": "2003-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.2038,
+      "annual_deaths_avg": 67690.0,
+      "slope_per_1svi": 3.08,
+      "slope_se": 5.51,
+      "slope_p": 0.5789,
+      "slope_per_1sd": 0.5,
+      "slope_lo_bound": 3.08,
+      "slope_hi_bound": 2.16,
+      "rate_q1": 14.2,
+      "rate_q5": 20.0,
+      "q5_over_q1_ratio": 1.41,
+      "spearman_rho": 0.493
+    },
+    {
+      "chapter": "C00-D48",
+      "window": "2003-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0508,
+      "annual_deaths_avg": 592869.0,
+      "slope_per_1svi": -69.65,
+      "slope_se": 26.49,
+      "slope_p": 0.0114,
+      "slope_per_1sd": -11.37,
+      "slope_lo_bound": -69.65,
+      "slope_hi_bound": -70.37,
+      "rate_q1": 190.4,
+      "rate_q5": 176.1,
+      "q5_over_q1_ratio": 0.93,
+      "spearman_rho": -0.1
+    },
+    {
+      "chapter": "D50-D89",
+      "window": "2003-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0577,
+      "annual_deaths_avg": 5897.0,
+      "slope_per_1svi": -1.19,
+      "slope_se": 0.45,
+      "slope_p": 0.0115,
+      "slope_per_1sd": -0.19,
+      "slope_lo_bound": -1.19,
+      "slope_hi_bound": -1.26,
+      "rate_q1": 1.8,
+      "rate_q5": 1.6,
+      "q5_over_q1_ratio": 0.86,
+      "spearman_rho": 0.025
+    },
+    {
+      "chapter": "E00-E88",
+      "window": "2003-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.2728,
+      "annual_deaths_avg": 87183.0,
+      "slope_per_1svi": -4.57,
+      "slope_se": 4.7,
+      "slope_p": 0.3355,
+      "slope_per_1sd": -0.75,
+      "slope_lo_bound": -4.57,
+      "slope_hi_bound": -5.01,
+      "rate_q1": 27.5,
+      "rate_q5": 27.4,
+      "q5_over_q1_ratio": 0.99,
+      "spearman_rho": 0.057
+    },
+    {
+      "chapter": "G00-G98",
+      "window": "2003-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.1547,
+      "annual_deaths_avg": 127223.0,
+      "slope_per_1svi": -10.69,
+      "slope_se": 7.79,
+      "slope_p": 0.1759,
+      "slope_per_1sd": -1.75,
+      "slope_lo_bound": -10.69,
+      "slope_hi_bound": -11.0,
+      "rate_q1": 45.8,
+      "rate_q5": 40.9,
+      "q5_over_q1_ratio": 0.89,
+      "spearman_rho": -0.227
+    },
+    {
+      "chapter": "I00-I99",
+      "window": "2003-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0762,
+      "annual_deaths_avg": 829649.0,
+      "slope_per_1svi": -53.14,
+      "slope_se": 43.44,
+      "slope_p": 0.2271,
+      "slope_per_1sd": -8.68,
+      "slope_lo_bound": -53.14,
+      "slope_hi_bound": -54.15,
+      "rate_q1": 245.1,
+      "rate_q5": 250.9,
+      "q5_over_q1_ratio": 1.02,
+      "spearman_rho": 0.064
+    },
+    {
+      "chapter": "J00-J98",
+      "window": "2003-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.2176,
+      "annual_deaths_avg": 250296.0,
+      "slope_per_1svi": -35.53,
+      "slope_se": 13.96,
+      "slope_p": 0.0141,
+      "slope_per_1sd": -5.8,
+      "slope_lo_bound": -35.53,
+      "slope_hi_bound": -36.74,
+      "rate_q1": 80.2,
+      "rate_q5": 73.1,
+      "q5_over_q1_ratio": 0.91,
+      "spearman_rho": -0.161
+    },
+    {
+      "chapter": "K00-K92",
+      "window": "2003-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.1693,
+      "annual_deaths_avg": 53199.0,
+      "slope_per_1svi": 3.91,
+      "slope_se": 2.37,
+      "slope_p": 0.1058,
+      "slope_per_1sd": 0.64,
+      "slope_lo_bound": 3.91,
+      "slope_hi_bound": 3.29,
+      "rate_q1": 16.4,
+      "rate_q5": 18.3,
+      "q5_over_q1_ratio": 1.12,
+      "spearman_rho": 0.093
+    },
+    {
+      "chapter": "N00-N98",
+      "window": "2003-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.449,
+      "annual_deaths_avg": 51885.0,
+      "slope_per_1svi": -8.57,
+      "slope_se": 4.79,
+      "slope_p": 0.0798,
+      "slope_per_1sd": -1.4,
+      "slope_lo_bound": -8.57,
+      "slope_hi_bound": -9.94,
+      "rate_q1": 14.5,
+      "rate_q5": 14.2,
+      "q5_over_q1_ratio": 0.98,
+      "spearman_rho": 0.183
+    }
+  ],
+  "gradient_d76_2017_2019_FL_AND_M": [
+    {
+      "chapter": "F01-F99",
+      "window": "2017-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 135052.0,
+      "slope_per_1svi": -75.71,
+      "slope_se": 11.57,
+      "slope_p": 0.0,
+      "slope_per_1sd": -12.36,
+      "slope_lo_bound": -75.71,
+      "slope_hi_bound": -75.71,
+      "rate_q1": 55.2,
+      "rate_q5": 26.3,
+      "q5_over_q1_ratio": 0.48,
+      "spearman_rho": -0.499
+    },
+    {
+      "chapter": "L00-L98",
+      "window": "2017-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0196,
+      "annual_deaths_avg": 5137.0,
+      "slope_per_1svi": -1.21,
+      "slope_se": 0.35,
+      "slope_p": 0.0011,
+      "slope_per_1sd": -0.2,
+      "slope_lo_bound": -1.21,
+      "slope_hi_bound": -1.24,
+      "rate_q1": 1.8,
+      "rate_q5": 1.3,
+      "q5_over_q1_ratio": 0.7,
+      "spearman_rho": -0.185
+    },
+    {
+      "chapter": "M00-M99",
+      "window": "2017-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 14060.0,
+      "slope_per_1svi": -3.68,
+      "slope_se": 0.63,
+      "slope_p": 0.0,
+      "slope_per_1sd": -0.6,
+      "slope_lo_bound": -3.68,
+      "slope_hi_bound": -3.68,
+      "rate_q1": 5.7,
+      "rate_q5": 3.7,
+      "q5_over_q1_ratio": 0.65,
+      "spearman_rho": -0.568
+    },
+    {
+      "chapter": "C00-D48",
+      "window": "2017-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 615012.0,
+      "slope_per_1svi": -67.86,
+      "slope_se": 26.05,
+      "slope_p": 0.0121,
+      "slope_per_1sd": -11.08,
+      "slope_lo_bound": -67.86,
+      "slope_hi_bound": -67.86,
+      "rate_q1": 189.0,
+      "rate_q5": 174.3,
+      "q5_over_q1_ratio": 0.92,
+      "spearman_rho": -0.108
+    },
+    {
+      "chapter": "I00-I99",
+      "window": "2017-2019",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 867467.0,
+      "slope_per_1svi": -47.02,
+      "slope_se": 43.8,
+      "slope_p": 0.2883,
+      "slope_per_1sd": -7.68,
+      "slope_lo_bound": -47.02,
+      "slope_hi_bound": -47.02,
+      "rate_q1": 245.4,
+      "rate_q5": 251.8,
+      "q5_over_q1_ratio": 1.03,
+      "spearman_rho": 0.105
+    }
+  ],
+  "gradient_2020_sensitivity": [
+    {
+      "chapter": "A00-B99",
+      "window": "2020-2020",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 68316.0,
+      "slope_per_1svi": -4.68,
+      "slope_se": 5.29,
+      "slope_p": 0.38,
+      "slope_per_1sd": -0.76,
+      "slope_lo_bound": -4.68,
+      "slope_hi_bound": -4.68,
+      "rate_q1": 16.4,
+      "rate_q5": 17.7,
+      "q5_over_q1_ratio": 1.08,
+      "spearman_rho": 0.306
+    },
+    {
+      "chapter": "C00-D48",
+      "window": "2020-2020",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 618579.0,
+      "slope_per_1svi": -69.07,
+      "slope_se": 25.6,
+      "slope_p": 0.0095,
+      "slope_per_1sd": -11.28,
+      "slope_lo_bound": -69.07,
+      "slope_hi_bound": -69.07,
+      "rate_q1": 189.8,
+      "rate_q5": 174.3,
+      "q5_over_q1_ratio": 0.92,
+      "spearman_rho": -0.146
+    },
+    {
+      "chapter": "D50-D89",
+      "window": "2020-2020",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 11466.0,
+      "slope_per_1svi": -2.13,
+      "slope_se": 0.77,
+      "slope_p": 0.0079,
+      "slope_per_1sd": -0.35,
+      "slope_lo_bound": -2.13,
+      "slope_hi_bound": -2.13,
+      "rate_q1": 3.5,
+      "rate_q5": 2.9,
+      "q5_over_q1_ratio": 0.83,
+      "spearman_rho": -0.107
+    },
+    {
+      "chapter": "E00-E88",
+      "window": "2020-2020",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 164128.0,
+      "slope_per_1svi": -3.31,
+      "slope_se": 8.06,
+      "slope_p": 0.6834,
+      "slope_per_1sd": -0.54,
+      "slope_lo_bound": -3.31,
+      "slope_hi_bound": -3.31,
+      "rate_q1": 48.8,
+      "rate_q5": 49.0,
+      "q5_over_q1_ratio": 1.0,
+      "spearman_rho": 0.146
+    },
+    {
+      "chapter": "F01-F99",
+      "window": "2020-2020",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 148432.0,
+      "slope_per_1svi": -83.52,
+      "slope_se": 12.18,
+      "slope_p": 0.0,
+      "slope_per_1sd": -13.64,
+      "slope_lo_bound": -83.52,
+      "slope_hi_bound": -83.52,
+      "rate_q1": 61.6,
+      "rate_q5": 28.7,
+      "q5_over_q1_ratio": 0.47,
+      "spearman_rho": -0.511
+    },
+    {
+      "chapter": "G00-G98",
+      "window": "2020-2020",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 262344.0,
+      "slope_per_1svi": 9.32,
+      "slope_se": 13.35,
+      "slope_p": 0.4885,
+      "slope_per_1sd": 1.52,
+      "slope_lo_bound": 9.32,
+      "slope_hi_bound": 9.32,
+      "rate_q1": 78.8,
+      "rate_q5": 82.9,
+      "q5_over_q1_ratio": 1.05,
+      "spearman_rho": 0.113
+    },
+    {
+      "chapter": "I00-I99",
+      "window": "2020-2020",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 928741.0,
+      "slope_per_1svi": -31.03,
+      "slope_se": 47.78,
+      "slope_p": 0.5191,
+      "slope_per_1sd": -5.07,
+      "slope_lo_bound": -31.03,
+      "slope_hi_bound": -31.03,
+      "rate_q1": 255.8,
+      "rate_q5": 269.0,
+      "q5_over_q1_ratio": 1.05,
+      "spearman_rho": 0.148
+    },
+    {
+      "chapter": "J00-J98",
+      "window": "2020-2020",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 270506.0,
+      "slope_per_1svi": -28.76,
+      "slope_se": 17.08,
+      "slope_p": 0.0985,
+      "slope_per_1sd": -4.7,
+      "slope_lo_bound": -28.76,
+      "slope_hi_bound": -28.76,
+      "rate_q1": 76.9,
+      "rate_q5": 74.2,
+      "q5_over_q1_ratio": 0.97,
+      "spearman_rho": 0.01
+    },
+    {
+      "chapter": "K00-K92",
+      "window": "2020-2020",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 123940.0,
+      "slope_per_1svi": -11.86,
+      "slope_se": 5.89,
+      "slope_p": 0.0496,
+      "slope_per_1sd": -1.94,
+      "slope_lo_bound": -11.86,
+      "slope_hi_bound": -11.86,
+      "rate_q1": 40.6,
+      "rate_q5": 35.7,
+      "q5_over_q1_ratio": 0.88,
+      "spearman_rho": -0.158
+    },
+    {
+      "chapter": "L00-L98",
+      "window": "2020-2020",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0392,
+      "annual_deaths_avg": 5674.0,
+      "slope_per_1svi": -1.22,
+      "slope_se": 0.42,
+      "slope_p": 0.0056,
+      "slope_per_1sd": -0.2,
+      "slope_lo_bound": -1.22,
+      "slope_hi_bound": -1.26,
+      "rate_q1": 2.1,
+      "rate_q5": 1.4,
+      "q5_over_q1_ratio": 0.68,
+      "spearman_rho": -0.049
+    },
+    {
+      "chapter": "M00-M99",
+      "window": "2020-2020",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 15421.0,
+      "slope_per_1svi": -3.56,
+      "slope_se": 0.89,
+      "slope_p": 0.0002,
+      "slope_per_1sd": -0.58,
+      "slope_lo_bound": -3.56,
+      "slope_hi_bound": -3.56,
+      "rate_q1": 6.0,
+      "rate_q5": 4.1,
+      "q5_over_q1_ratio": 0.68,
+      "spearman_rho": -0.404
+    },
+    {
+      "chapter": "N00-N98",
+      "window": "2020-2020",
+      "n_states": 51,
+      "suppressed_cell_share": 0.0,
+      "annual_deaths_avg": 76772.0,
+      "slope_per_1svi": -8.62,
+      "slope_se": 5.98,
+      "slope_p": 0.1559,
+      "slope_per_1sd": -1.41,
+      "slope_lo_bound": -8.62,
+      "slope_hi_bound": -8.62,
+      "rate_q1": 19.6,
+      "rate_q5": 20.4,
+      "q5_over_q1_ratio": 1.04,
+      "spearman_rho": 0.176
+    }
+  ],
+  "equity_rank_table": [
+    {
+      "category": "Cardiovascular",
+      "chapter": "I00-I99",
+      "window": "2003-2016",
+      "n_shortage_units": 56,
+      "n_market_cells": 33,
+      "tbd_share": 0.446,
+      "annual_deaths_avg": 821545.0,
+      "slope_crude_per_1sd": -8.9,
+      "q5_over_q1_crude": 1.02,
+      "slope_aar_per_1sd": 0.449,
+      "slope_aar_p": 0.2076,
+      "suppressed_share": 0.0772,
+      "burden_x_exposure": 46006520.0,
+      "equity_weighted_burden_crude": 0.0,
+      "equity_weighted_burden_aar": 20656927.0,
+      "rank": 1.0,
+      "gradient_flag": "正不显著",
+      "robustness_note": "suppression-sensitive：available-case +0.45 (p=0.21) vs 0/9 填补包络 [+0.91,+0.94] (p≈0.001)。矛盾机制（本机复核）：屏蔽发生在 113 子行级且集中于低 SVI 小州（州级屏蔽比例 vs SVI corr=-0.31；低SVI组 8.5% vs 高SVI组 6.9%），available-case 系统性压低低 SVI 州死亡率。方向口径依赖，'无梯度'不可下结论"
+    },
+    {
+      "category": "Anti-Infective",
+      "chapter": "A00-B99",
+      "window": "2003-2016",
+      "n_shortage_units": 48,
+      "n_market_cells": 35,
+      "tbd_share": 0.646,
+      "annual_deaths_avg": 67762.0,
+      "slope_crude_per_1sd": 0.72,
+      "q5_over_q1_crude": 1.47,
+      "slope_aar_per_1sd": 0.335,
+      "slope_aar_p": 0.0,
+      "suppressed_share": 0.2064,
+      "burden_x_exposure": 3252576.0,
+      "equity_weighted_burden_crude": 2341855.0,
+      "equity_weighted_burden_aar": 1089613.0,
+      "rank": 2.0,
+      "gradient_flag": "正且显著(p<0.05)",
+      "robustness_note": "头条口径 +0.22–0.34/SD：0.335 为 available-case 上界；人口加权 WLS +0.160 (p=0.023)，幅度约减半；梯度部分由较小州驱动（MNAR 包络 [+0.231,+0.218]，两端 p≤0.0001，不含 0——存活）"
+    },
+    {
+      "category": "Oncology",
+      "chapter": "C00-D48",
+      "window": "2003-2016",
+      "n_shortage_units": 45,
+      "n_market_cells": 21,
+      "tbd_share": 0.467,
+      "annual_deaths_avg": 588124.0,
+      "slope_crude_per_1sd": -11.42,
+      "q5_over_q1_crude": 0.93,
+      "slope_aar_per_1sd": 0.016,
+      "slope_aar_p": 0.8694,
+      "suppressed_share": 0.0513,
+      "burden_x_exposure": 26465580.0,
+      "equity_weighted_burden_crude": 0.0,
+      "equity_weighted_burden_aar": 423449.0,
+      "rank": 3.0,
+      "gradient_flag": "正不显著",
+      "robustness_note": "无梯度（available-case 与包络一致，+0.02/+0.09）"
+    },
+    {
+      "category": "Urology",
+      "chapter": "N00-N98",
+      "window": "2003-2016",
+      "n_shortage_units": 2,
+      "n_market_cells": 2,
+      "tbd_share": 1.0,
+      "annual_deaths_avg": 47514.0,
+      "slope_crude_per_1sd": -1.36,
+      "q5_over_q1_crude": 0.97,
+      "slope_aar_per_1sd": 0.527,
+      "slope_aar_p": 0.0473,
+      "suppressed_share": 0.4628,
+      "burden_x_exposure": 95028.0,
+      "equity_weighted_burden_crude": 0.0,
+      "equity_weighted_burden_aar": 50080.0,
+      "rank": 4.0,
+      "gradient_flag": "正且显著(p<0.05)",
+      "robustness_note": "46% 屏蔽，最不可靠；翻正 (+0.527) 不作为证据"
+    },
+    {
+      "category": "Gastroenterology",
+      "chapter": "K00-K92",
+      "window": "2003-2016",
+      "n_shortage_units": 16,
+      "n_market_cells": 15,
+      "tbd_share": 0.625,
+      "annual_deaths_avg": 41004.0,
+      "slope_crude_per_1sd": 1.06,
+      "q5_over_q1_crude": 1.25,
+      "slope_aar_per_1sd": 0.028,
+      "slope_aar_p": 0.7948,
+      "suppressed_share": 0.1753,
+      "burden_x_exposure": 656064.0,
+      "equity_weighted_burden_crude": 695428.0,
+      "equity_weighted_burden_aar": 18370.0,
+      "rank": 5.0,
+      "gradient_flag": "正不显著",
+      "robustness_note": "crude 正梯度系年龄混杂，AAR 后归零（本机+严复核一致）"
+    },
+    {
+      "category": "Psychiatry",
+      "chapter": "F01-F99",
+      "window": "2017-2019",
+      "n_shortage_units": 44,
+      "n_market_cells": 13,
+      "tbd_share": 0.136,
+      "annual_deaths_avg": 135052.0,
+      "slope_crude_per_1sd": -12.36,
+      "q5_over_q1_crude": 0.48,
+      "slope_aar_per_1sd": -5.002,
+      "slope_aar_p": 0.0004,
+      "suppressed_share": 0.0,
+      "burden_x_exposure": 5942288.0,
+      "equity_weighted_burden_crude": 0.0,
+      "equity_weighted_burden_aar": 0.0,
+      "rank": 8.5,
+      "gradient_flag": "负且显著(p<0.05)",
+      "robustness_note": "全口径最硬的负梯度：逐年 -4.82/-4.88/-5.30/-5.77 全 p≤0.0006，0% 屏蔽，WLS/完全州一致——主文负梯度唯一代表"
+    },
+    {
+      "category": "Neurology",
+      "chapter": "G00-G98",
+      "window": "2003-2016",
+      "n_shortage_units": 27,
+      "n_market_cells": 14,
+      "tbd_share": 0.37,
+      "annual_deaths_avg": 106271.0,
+      "slope_crude_per_1sd": -2.16,
+      "q5_over_q1_crude": 0.86,
+      "slope_aar_per_1sd": -1.005,
+      "slope_aar_p": 0.0171,
+      "suppressed_share": 0.1657,
+      "burden_x_exposure": 2869317.0,
+      "equity_weighted_burden_crude": 0.0,
+      "equity_weighted_burden_aar": 0.0,
+      "rank": 8.5,
+      "gradient_flag": "负且显著(p<0.05)",
+      "robustness_note": "方向为负但不稳健：单年 2003-12 显著、2015 n.s.、2013-16 窗 -0.45 (p=0.36)、2020 翻正 +3.42；完全州仅 10 且 ≈0；MNAR 包络含 0。降级，不进主文"
+    },
+    {
+      "category": "Endocrinology/Metabolism",
+      "chapter": "E00-E88",
+      "window": "2003-2016",
+      "n_shortage_units": 46,
+      "n_market_cells": 20,
+      "tbd_share": 0.435,
+      "annual_deaths_avg": 77208.0,
+      "slope_crude_per_1sd": -0.64,
+      "q5_over_q1_crude": 1.01,
+      "slope_aar_per_1sd": -0.336,
+      "slope_aar_p": 0.3657,
+      "suppressed_share": 0.2923,
+      "burden_x_exposure": 3551568.0,
+      "equity_weighted_burden_crude": 0.0,
+      "equity_weighted_burden_aar": 0.0,
+      "rank": 8.5,
+      "gradient_flag": "负",
+      "robustness_note": "available-case 不可靠（29% 屏蔽，符号在 MNAR 包络外，补全后转弱正），见表5 H3_1"
+    },
+    {
+      "category": "Pulmonary/Allergy",
+      "chapter": "J00-J98",
+      "window": "2003-2016",
+      "n_shortage_units": 6,
+      "n_market_cells": 3,
+      "tbd_share": 0.333,
+      "annual_deaths_avg": 244478.0,
+      "slope_crude_per_1sd": -5.69,
+      "q5_over_q1_crude": 0.91,
+      "slope_aar_per_1sd": -0.167,
+      "slope_aar_p": 0.4848,
+      "suppressed_share": 0.2218,
+      "burden_x_exposure": 1466868.0,
+      "equity_weighted_burden_crude": 0.0,
+      "equity_weighted_burden_aar": 0.0,
+      "rank": 8.5,
+      "gradient_flag": "负",
+      "robustness_note": "available-case 不可靠（22% 屏蔽，符号在 MNAR 包络外），见表5 H3_1"
+    },
+    {
+      "category": "Dermatology",
+      "chapter": "L00-L98",
+      "window": "2017-2019",
+      "n_shortage_units": 10,
+      "n_market_cells": 6,
+      "tbd_share": 0.5,
+      "annual_deaths_avg": 5137.0,
+      "slope_crude_per_1sd": -0.2,
+      "q5_over_q1_crude": 0.7,
+      "slope_aar_per_1sd": -0.081,
+      "slope_aar_p": 0.1859,
+      "suppressed_share": 0.0196,
+      "burden_x_exposure": 51370.0,
+      "equity_weighted_burden_crude": 0.0,
+      "equity_weighted_burden_aar": 0.0,
+      "rank": 8.5,
+      "gradient_flag": "负",
+      "robustness_note": "衰减为无（p=0.19）"
+    },
+    {
+      "category": "Musculoskeletal",
+      "chapter": "M00-M99",
+      "window": "2017-2019",
+      "n_shortage_units": 2,
+      "n_market_cells": 2,
+      "tbd_share": 1.0,
+      "annual_deaths_avg": 14060.0,
+      "slope_crude_per_1sd": -0.6,
+      "q5_over_q1_crude": 0.65,
+      "slope_aar_per_1sd": -0.333,
+      "slope_aar_p": 0.0022,
+      "suppressed_share": 0.0,
+      "burden_x_exposure": 28120.0,
+      "equity_weighted_burden_crude": 0.0,
+      "equity_weighted_burden_aar": 0.0,
+      "rank": 8.5,
+      "gradient_flag": "负且显著(p<0.05)",
+      "robustness_note": "负且显著（p=0.002）；3 年窗、剔州后 p=0.086——可进主文，附录级谨慎"
+    }
+  ],
+  "aar_gradient": {
+    "status": "Phase 3b（任务 #10）：年龄调整（2000 US 标准）梯度，缺失 non-random（小州×罕见死因），主口径 available-case + 完全州样本/人口加权敏感性",
+    "d140only_2003_2016": [
+      {
+        "chapter": "A00-B99",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cell_share": 0.2064,
+        "slope_aar_per_1sd": 0.335,
+        "slope_aar_se": 0.399,
+        "slope_aar_p": 0.0,
+        "slope_aar_wls_pop": 0.161,
+        "slope_aar_complete_states": NaN,
+        "n_complete_states": 0,
+        "aar_mean_us": 1.63
+      },
+      {
+        "chapter": "C00-D48",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0513,
+        "slope_aar_per_1sd": 0.016,
+        "slope_aar_se": 0.577,
+        "slope_aar_p": 0.8694,
+        "slope_aar_wls_pop": -0.192,
+        "slope_aar_complete_states": NaN,
+        "n_complete_states": 0,
+        "aar_mean_us": 7.67
+      },
+      {
+        "chapter": "D50-D89",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cell_share": 0.07,
+        "slope_aar_per_1sd": 0.04,
+        "slope_aar_se": 0.32,
+        "slope_aar_p": 0.4453,
+        "slope_aar_wls_pop": -0.086,
+        "slope_aar_complete_states": 0.017,
+        "n_complete_states": 43,
+        "aar_mean_us": 1.48
+      },
+      {
+        "chapter": "E00-E88",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cell_share": 0.2923,
+        "slope_aar_per_1sd": -0.336,
+        "slope_aar_se": 2.256,
+        "slope_aar_p": 0.3657,
+        "slope_aar_wls_pop": -0.714,
+        "slope_aar_complete_states": NaN,
+        "n_complete_states": 1,
+        "aar_mean_us": 10.5
+      },
+      {
+        "chapter": "G00-G98",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cell_share": 0.1657,
+        "slope_aar_per_1sd": -1.005,
+        "slope_aar_se": 2.494,
+        "slope_aar_p": 0.0171,
+        "slope_aar_wls_pop": -0.71,
+        "slope_aar_complete_states": NaN,
+        "n_complete_states": 10,
+        "aar_mean_us": 12.0
+      },
+      {
+        "chapter": "I00-I99",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0772,
+        "slope_aar_per_1sd": 0.449,
+        "slope_aar_se": 2.156,
+        "slope_aar_p": 0.2076,
+        "slope_aar_wls_pop": 0.127,
+        "slope_aar_complete_states": NaN,
+        "n_complete_states": 19,
+        "aar_mean_us": 14.95
+      },
+      {
+        "chapter": "J00-J98",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cell_share": 0.2218,
+        "slope_aar_per_1sd": -0.167,
+        "slope_aar_se": 1.449,
+        "slope_aar_p": 0.4848,
+        "slope_aar_wls_pop": -0.475,
+        "slope_aar_complete_states": NaN,
+        "n_complete_states": 0,
+        "aar_mean_us": 8.21
+      },
+      {
+        "chapter": "K00-K92",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cell_share": 0.1753,
+        "slope_aar_per_1sd": 0.028,
+        "slope_aar_se": 0.666,
+        "slope_aar_p": 0.7948,
+        "slope_aar_wls_pop": 0.141,
+        "slope_aar_complete_states": NaN,
+        "n_complete_states": 7,
+        "aar_mean_us": 2.23
+      },
+      {
+        "chapter": "N00-N98",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cell_share": 0.4628,
+        "slope_aar_per_1sd": 0.527,
+        "slope_aar_se": 1.588,
+        "slope_aar_p": 0.0473,
+        "slope_aar_wls_pop": -0.4,
+        "slope_aar_complete_states": NaN,
+        "n_complete_states": 0,
+        "aar_mean_us": 3.8
+      }
+    ],
+    "d76_2017_2019_FLM": [
+      {
+        "chapter": "F01-F99",
+        "window": "2017-2019",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": -5.002,
+        "slope_aar_se": 8.016,
+        "slope_aar_p": 0.0004,
+        "slope_aar_wls_pop": -8.544,
+        "slope_aar_complete_states": -5.002,
+        "n_complete_states": 51,
+        "aar_mean_us": 33.5
+      },
+      {
+        "chapter": "L00-L98",
+        "window": "2017-2019",
+        "n_states": 46,
+        "suppressed_cell_share": 0.0196,
+        "slope_aar_per_1sd": -0.081,
+        "slope_aar_se": 0.372,
+        "slope_aar_p": 0.1859,
+        "slope_aar_wls_pop": -0.127,
+        "slope_aar_complete_states": -0.081,
+        "n_complete_states": 46,
+        "aar_mean_us": 1.3
+      },
+      {
+        "chapter": "M00-M99",
+        "window": "2017-2019",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": -0.333,
+        "slope_aar_se": 0.63,
+        "slope_aar_p": 0.0022,
+        "slope_aar_wls_pop": -0.361,
+        "slope_aar_complete_states": -0.333,
+        "n_complete_states": 51,
+        "aar_mean_us": 3.59
+      },
+      {
+        "chapter": "C00-D48",
+        "window": "2017-2019",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": 0.959,
+        "slope_aar_se": 12.167,
+        "slope_aar_p": 0.6313,
+        "slope_aar_wls_pop": -4.049,
+        "slope_aar_complete_states": 0.959,
+        "n_complete_states": 51,
+        "aar_mean_us": 152.96
+      },
+      {
+        "chapter": "I00-I99",
+        "window": "2017-2019",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": 12.958,
+        "slope_aar_se": 26.389,
+        "slope_aar_p": 0.0041,
+        "slope_aar_wls_pop": 2.585,
+        "slope_aar_complete_states": 12.958,
+        "n_complete_states": 51,
+        "aar_mean_us": 217.08
+      }
+    ],
+    "sens_2020": [
+      {
+        "chapter": "A00-B99",
+        "window": "2020-2020",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": 1.636,
+        "slope_aar_se": 3.585,
+        "slope_aar_p": 0.0074,
+        "slope_aar_wls_pop": -0.015,
+        "slope_aar_complete_states": 1.636,
+        "n_complete_states": 51,
+        "aar_mean_us": 16.83
+      },
+      {
+        "chapter": "C00-D48",
+        "window": "2020-2020",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": 0.071,
+        "slope_aar_se": 12.08,
+        "slope_aar_p": 0.9716,
+        "slope_aar_wls_pop": -4.432,
+        "slope_aar_complete_states": 0.071,
+        "n_complete_states": 51,
+        "aar_mean_us": 147.9
+      },
+      {
+        "chapter": "D50-D89",
+        "window": "2020-2020",
+        "n_states": 49,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": -0.03,
+        "slope_aar_se": 0.598,
+        "slope_aar_p": 0.7556,
+        "slope_aar_wls_pop": -0.188,
+        "slope_aar_complete_states": -0.03,
+        "n_complete_states": 49,
+        "aar_mean_us": 2.86
+      },
+      {
+        "chapter": "E00-E88",
+        "window": "2020-2020",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": 2.009,
+        "slope_aar_se": 6.25,
+        "slope_aar_p": 0.0547,
+        "slope_aar_wls_pop": 0.852,
+        "slope_aar_complete_states": 2.009,
+        "n_complete_states": 51,
+        "aar_mean_us": 40.29
+      },
+      {
+        "chapter": "F01-F99",
+        "window": "2020-2020",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": -5.771,
+        "slope_aar_se": 8.213,
+        "slope_aar_p": 0.0001,
+        "slope_aar_wls_pop": -9.65,
+        "slope_aar_complete_states": -5.771,
+        "n_complete_states": 51,
+        "aar_mean_us": 35.81
+      },
+      {
+        "chapter": "G00-G98",
+        "window": "2020-2020",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": 3.422,
+        "slope_aar_se": 11.685,
+        "slope_aar_p": 0.079,
+        "slope_aar_wls_pop": 4.27,
+        "slope_aar_complete_states": 3.422,
+        "n_complete_states": 51,
+        "aar_mean_us": 65.56
+      },
+      {
+        "chapter": "I00-I99",
+        "window": "2020-2020",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": 14.408,
+        "slope_aar_se": 29.285,
+        "slope_aar_p": 0.0041,
+        "slope_aar_wls_pop": 3.746,
+        "slope_aar_complete_states": 14.408,
+        "n_complete_states": 51,
+        "aar_mean_us": 224.58
+      },
+      {
+        "chapter": "J00-J98",
+        "window": "2020-2020",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": 2.354,
+        "slope_aar_se": 12.253,
+        "slope_aar_p": 0.2451,
+        "slope_aar_wls_pop": -1.489,
+        "slope_aar_complete_states": 2.354,
+        "n_complete_states": 51,
+        "aar_mean_us": 65.14
+      },
+      {
+        "chapter": "K00-K92",
+        "window": "2020-2020",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": -0.283,
+        "slope_aar_se": 6.222,
+        "slope_aar_p": 0.782,
+        "slope_aar_wls_pop": -0.79,
+        "slope_aar_complete_states": -0.283,
+        "n_complete_states": 51,
+        "aar_mean_us": 31.05
+      },
+      {
+        "chapter": "L00-L98",
+        "window": "2020-2020",
+        "n_states": 46,
+        "suppressed_cell_share": 0.0392,
+        "slope_aar_per_1sd": -0.021,
+        "slope_aar_se": 0.371,
+        "slope_aar_p": 0.7199,
+        "slope_aar_wls_pop": -0.119,
+        "slope_aar_complete_states": -0.021,
+        "n_complete_states": 46,
+        "aar_mean_us": 1.38
+      },
+      {
+        "chapter": "M00-M99",
+        "window": "2020-2020",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": -0.174,
+        "slope_aar_se": 0.807,
+        "slope_aar_p": 0.1934,
+        "slope_aar_wls_pop": -0.326,
+        "slope_aar_complete_states": -0.174,
+        "n_complete_states": 51,
+        "aar_mean_us": 3.81
+      },
+      {
+        "chapter": "N00-N98",
+        "window": "2020-2020",
+        "n_states": 51,
+        "suppressed_cell_share": 0.0,
+        "slope_aar_per_1sd": 1.427,
+        "slope_aar_se": 4.596,
+        "slope_aar_p": 0.0631,
+        "slope_aar_wls_pop": -0.349,
+        "slope_aar_complete_states": 1.427,
+        "n_complete_states": 51,
+        "aar_mean_us": 18.64
+      }
+    ],
+    "crude_vs_aar_compare": [
+      {
+        "chapter": "A00-B99",
+        "window": "2003-2016 (D140)",
+        "slope_crude_per_1sd": 0.72,
+        "slope_crude_p": 0.4394,
+        "slope_aar_per_1sd": 0.335,
+        "slope_aar_p": 0.0,
+        "sign_flip": false
+      },
+      {
+        "chapter": "C00-D48",
+        "window": "2003-2016 (D140)",
+        "slope_crude_per_1sd": -11.42,
+        "slope_crude_p": 0.0116,
+        "slope_aar_per_1sd": 0.016,
+        "slope_aar_p": 0.8694,
+        "sign_flip": true
+      },
+      {
+        "chapter": "D50-D89",
+        "window": "2003-2016 (D140)",
+        "slope_crude_per_1sd": -0.17,
+        "slope_crude_p": 0.0148,
+        "slope_aar_per_1sd": 0.04,
+        "slope_aar_p": 0.4453,
+        "sign_flip": true
+      },
+      {
+        "chapter": "E00-E88",
+        "window": "2003-2016 (D140)",
+        "slope_crude_per_1sd": -0.64,
+        "slope_crude_p": 0.3746,
+        "slope_aar_per_1sd": -0.336,
+        "slope_aar_p": 0.3657,
+        "sign_flip": false
+      },
+      {
+        "chapter": "G00-G98",
+        "window": "2003-2016 (D140)",
+        "slope_crude_per_1sd": -2.16,
+        "slope_crude_p": 0.0698,
+        "slope_aar_per_1sd": -1.005,
+        "slope_aar_p": 0.0171,
+        "sign_flip": false
+      },
+      {
+        "chapter": "I00-I99",
+        "window": "2003-2016 (D140)",
+        "slope_crude_per_1sd": -8.9,
+        "slope_crude_p": 0.2167,
+        "slope_aar_per_1sd": 0.449,
+        "slope_aar_p": 0.2076,
+        "sign_flip": true
+      },
+      {
+        "chapter": "J00-J98",
+        "window": "2003-2016 (D140)",
+        "slope_crude_per_1sd": -5.69,
+        "slope_crude_p": 0.0118,
+        "slope_aar_per_1sd": -0.167,
+        "slope_aar_p": 0.4848,
+        "sign_flip": false
+      },
+      {
+        "chapter": "K00-K92",
+        "window": "2003-2016 (D140)",
+        "slope_crude_per_1sd": 1.06,
+        "slope_crude_p": 0.0017,
+        "slope_aar_per_1sd": 0.028,
+        "slope_aar_p": 0.7948,
+        "sign_flip": false
+      },
+      {
+        "chapter": "N00-N98",
+        "window": "2003-2016 (D140)",
+        "slope_crude_per_1sd": -1.36,
+        "slope_crude_p": 0.0808,
+        "slope_aar_per_1sd": 0.527,
+        "slope_aar_p": 0.0473,
+        "sign_flip": true
+      },
+      {
+        "chapter": "F01-F99",
+        "window": "2017-2019 (D76)",
+        "slope_crude_per_1sd": -12.36,
+        "slope_crude_p": 0.0,
+        "slope_aar_per_1sd": -5.002,
+        "slope_aar_p": 0.0004,
+        "sign_flip": false
+      },
+      {
+        "chapter": "L00-L98",
+        "window": "2017-2019 (D76)",
+        "slope_crude_per_1sd": -0.2,
+        "slope_crude_p": 0.0011,
+        "slope_aar_per_1sd": -0.081,
+        "slope_aar_p": 0.1859,
+        "sign_flip": false
+      },
+      {
+        "chapter": "M00-M99",
+        "window": "2017-2019 (D76)",
+        "slope_crude_per_1sd": -0.6,
+        "slope_crude_p": 0.0,
+        "slope_aar_per_1sd": -0.333,
+        "slope_aar_p": 0.0022,
+        "sign_flip": false
+      },
+      {
+        "chapter": "C00-D48",
+        "window": "2017-2019 (D76)",
+        "slope_crude_per_1sd": -11.08,
+        "slope_crude_p": 0.0121,
+        "slope_aar_per_1sd": 0.959,
+        "slope_aar_p": 0.6313,
+        "sign_flip": true
+      },
+      {
+        "chapter": "I00-I99",
+        "window": "2017-2019 (D76)",
+        "slope_crude_per_1sd": -7.68,
+        "slope_crude_p": 0.2883,
+        "slope_aar_per_1sd": 12.958,
+        "slope_aar_p": 0.0041,
+        "sign_flip": true
+      }
+    ]
+  },
+  "event_study": {
+    "status": "exploratory",
+    "coef": {
+      "hi_k_-5.0": {
+        "b": -4.024,
+        "p": 0.2261
+      },
+      "hi_k_-4.0": {
+        "b": -3.196,
+        "p": 0.3331
+      },
+      "hi_k_-3.0": {
+        "b": -2.886,
+        "p": 0.3983
+      },
+      "hi_k_-2.0": {
+        "b": -2.504,
+        "p": 0.4649
+      },
+      "hi_k_-1.0": {
+        "b": -2.868,
+        "p": 0.4019
+      },
+      "hi_k_1.0": {
+        "b": -0.764,
+        "p": 0.844
+      },
+      "hi_k_2.0": {
+        "b": 0.669,
+        "p": 0.8816
+      },
+      "hi_k_3.0": {
+        "b": -2.713,
+        "p": 0.4372
+      },
+      "hi_k_4.0": {
+        "b": -0.221,
+        "p": 0.96
+      },
+      "all_k_-5.0": {
+        "b": -52.659,
+        "p": 0.0
+      },
+      "all_k_-4.0": {
+        "b": 15.073,
+        "p": 0.0
+      },
+      "all_k_-3.0": {
+        "b": 18.877,
+        "p": 0.0
+      },
+      "all_k_-2.0": {
+        "b": 19.966,
+        "p": 0.0
+      },
+      "all_k_-1.0": {
+        "b": 23.678,
+        "p": 0.0
+      },
+      "all_k_1.0": {
+        "b": 20.45,
+        "p": 0.0
+      },
+      "all_k_2.0": {
+        "b": 26.702,
+        "p": 0.0
+      },
+      "all_k_3.0": {
+        "b": -27.858,
+        "p": 0.0
+      },
+      "all_k_4.0": {
+        "b": -27.849,
+        "p": 0.0
+      }
+    },
+    "stat_hi_svi_post": 1.564,
+    "perm_p": 0.072,
+    "caveats": [
+      "幸存者偏差：resolved 记录被删 → 历史短缺活跃度被低估",
+      "全国性处理 × 生态层（州×章×年）识别力弱",
+      "仅置换检验作唯一推断支撑，不写因果语言"
+    ]
+  },
+  "chapter_panel_upgrade": {
+    "task": "#13 章节级面板校验 + A 章零屏蔽复验（data-engineer state_mortality_chapter.parquet）",
+    "data_facts": {
+      "rows": 14280,
+      "years": [
+        2003,
+        2016
+      ],
+      "chapters_per_state_year": 20,
+      "chapter_level_aar_direct": true,
+      "review_chapters_suppressed_cells": {
+        "A00-B99": 0,
+        "C00-D48": 0,
+        "D50-D89": 4,
+        "E00-E88": 0,
+        "F01-F99": 0,
+        "G00-G98": 0,
+        "I00-I99": 0,
+        "J00-J98": 0,
+        "K00-K92": 0,
+        "L00-L98": 52,
+        "M00-M99": 0,
+        "N00-N98": 0
+      }
+    },
+    "reconciliation": {
+      "subrow_vs_chapter_total_diff_pct": 0.1336,
+      "per_chapter_rel_diff_pct": {
+        "A00-B99": 0.729,
+        "C00-D48": 0.041,
+        "D50-D89": 106.197,
+        "E00-E88": 35.981,
+        "G00-G98": 34.773,
+        "I00-I99": 0.042,
+        "J00-J98": 0.201,
+        "K00-K92": 128.086,
+        "N00-N98": 34.908,
+        "O00-O99": 3.651,
+        "P00-P96": 0.0,
+        "Q00-Q99": 0.0,
+        "R00-R99": 0.0,
+        "V01-Y89": 0.387
+      },
+      "d76_2017_vs_2016_allcause_ratio": 1.0253
+    },
+    "gradient_2003_2016_chapter": [
+      {
+        "chapter": "A00-B99",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cells": 0,
+        "annual_deaths_avg": 68256.0,
+        "slope_crude_1sd": 0.66,
+        "slope_crude_se": 0.93,
+        "slope_crude_p": 0.4759,
+        "slope_aar_1sd": 3.813,
+        "slope_aar_se": 0.864,
+        "slope_aar_p": 0.0001,
+        "slope_aar_wls_1sd": 1.524,
+        "slope_aar_wls_p": 0.0764,
+        "aar_mean_us": 20.77,
+        "spearman_rho_aar": 0.621
+      },
+      {
+        "chapter": "C00-D48",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cells": 0,
+        "annual_deaths_avg": 588367.0,
+        "slope_crude_1sd": -11.49,
+        "slope_crude_se": 4.35,
+        "slope_crude_p": 0.011,
+        "slope_aar_1sd": 2.262,
+        "slope_aar_se": 2.134,
+        "slope_aar_p": 0.2945,
+        "slope_aar_wls_1sd": -3.881,
+        "slope_aar_wls_p": 0.0728,
+        "aar_mean_us": 177.08,
+        "spearman_rho_aar": 0.177
+      },
+      {
+        "chapter": "D50-D89",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cells": 4,
+        "annual_deaths_avg": 9976.0,
+        "slope_crude_1sd": -0.27,
+        "slope_crude_se": 0.12,
+        "slope_crude_p": 0.0281,
+        "slope_aar_1sd": 0.176,
+        "slope_aar_se": 0.091,
+        "slope_aar_p": 0.058,
+        "slope_aar_wls_1sd": -0.116,
+        "slope_aar_wls_p": 0.2808,
+        "aar_mean_us": 3.04,
+        "spearman_rho_aar": 0.32
+      },
+      {
+        "chapter": "E00-E88",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cells": 0,
+        "annual_deaths_avg": 104988.0,
+        "slope_crude_1sd": -1.64,
+        "slope_crude_se": 0.95,
+        "slope_crude_p": 0.0913,
+        "slope_aar_1sd": 0.54,
+        "slope_aar_se": 0.728,
+        "slope_aar_p": 0.462,
+        "slope_aar_wls_1sd": -0.122,
+        "slope_aar_wls_p": 0.8713,
+        "aar_mean_us": 31.8,
+        "spearman_rho_aar": 0.176
+      },
+      {
+        "chapter": "F01-F99",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cells": 0,
+        "annual_deaths_avg": 111954.0,
+        "slope_crude_1sd": -6.13,
+        "slope_crude_se": 1.31,
+        "slope_crude_p": 0.0,
+        "slope_aar_1sd": -0.596,
+        "slope_aar_se": 0.983,
+        "slope_aar_p": 0.5473,
+        "slope_aar_wls_1sd": -3.24,
+        "slope_aar_wls_p": 0.0056,
+        "aar_mean_us": 33.13,
+        "spearman_rho_aar": -0.109
+      },
+      {
+        "chapter": "G00-G98",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cells": 0,
+        "annual_deaths_avg": 143224.0,
+        "slope_crude_1sd": -3.09,
+        "slope_crude_se": 1.37,
+        "slope_crude_p": 0.0289,
+        "slope_aar_1sd": -0.881,
+        "slope_aar_se": 1.058,
+        "slope_aar_p": 0.409,
+        "slope_aar_wls_1sd": -0.335,
+        "slope_aar_wls_p": 0.7983,
+        "aar_mean_us": 43.58,
+        "spearman_rho_aar": -0.062
+      },
+      {
+        "chapter": "I00-I99",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cells": 0,
+        "annual_deaths_avg": 821889.0,
+        "slope_crude_1sd": -9.01,
+        "slope_crude_se": 7.1,
+        "slope_crude_p": 0.2107,
+        "slope_aar_1sd": 15.669,
+        "slope_aar_se": 4.582,
+        "slope_aar_p": 0.0013,
+        "slope_aar_wls_1sd": 5.492,
+        "slope_aar_wls_p": 0.2428,
+        "aar_mean_us": 249.33,
+        "spearman_rho_aar": 0.38
+      },
+      {
+        "chapter": "J00-J98",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cells": 0,
+        "annual_deaths_avg": 244969.0,
+        "slope_crude_1sd": -5.79,
+        "slope_crude_se": 2.18,
+        "slope_crude_p": 0.0107,
+        "slope_aar_1sd": 0.921,
+        "slope_aar_se": 1.729,
+        "slope_aar_p": 0.5965,
+        "slope_aar_wls_1sd": -1.467,
+        "slope_aar_wls_p": 0.3941,
+        "aar_mean_us": 74.73,
+        "spearman_rho_aar": 0.045
+      },
+      {
+        "chapter": "K00-K92",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cells": 0,
+        "annual_deaths_avg": 93524.0,
+        "slope_crude_1sd": -0.93,
+        "slope_crude_se": 0.63,
+        "slope_crude_p": 0.148,
+        "slope_aar_1sd": 0.729,
+        "slope_aar_se": 0.514,
+        "slope_aar_p": 0.1626,
+        "slope_aar_wls_1sd": 0.332,
+        "slope_aar_wls_p": 0.5111,
+        "aar_mean_us": 28.14,
+        "spearman_rho_aar": 0.184
+      },
+      {
+        "chapter": "L00-L98",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cells": 52,
+        "annual_deaths_avg": 4198.0,
+        "slope_crude_1sd": -0.1,
+        "slope_crude_se": 0.05,
+        "slope_crude_p": 0.0557,
+        "slope_aar_1sd": 0.066,
+        "slope_aar_se": 0.05,
+        "slope_aar_p": 0.192,
+        "slope_aar_wls_1sd": -0.048,
+        "slope_aar_wls_p": 0.3507,
+        "aar_mean_us": 1.29,
+        "spearman_rho_aar": 0.206
+      },
+      {
+        "chapter": "M00-M99",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cells": 0,
+        "annual_deaths_avg": 13810.0,
+        "slope_crude_1sd": -0.62,
+        "slope_crude_se": 0.11,
+        "slope_crude_p": 0.0,
+        "slope_aar_1sd": -0.426,
+        "slope_aar_se": 0.121,
+        "slope_aar_p": 0.001,
+        "slope_aar_wls_1sd": -0.385,
+        "slope_aar_wls_p": 0.001,
+        "aar_mean_us": 4.24,
+        "spearman_rho_aar": -0.444
+      },
+      {
+        "chapter": "N00-N98",
+        "window": "2003-2016",
+        "n_states": 51,
+        "suppressed_cells": 0,
+        "annual_deaths_avg": 64101.0,
+        "slope_crude_1sd": -1.83,
+        "slope_crude_se": 0.86,
+        "slope_crude_p": 0.0388,
+        "slope_aar_1sd": 1.735,
+        "slope_aar_se": 0.698,
+        "slope_aar_p": 0.0164,
+        "slope_aar_wls_1sd": -0.577,
+        "slope_aar_wls_p": 0.4746,
+        "aar_mean_us": 19.52,
+        "spearman_rho_aar": 0.295
+      }
+    ],
+    "cross_validation_d76": {
+      "note": "D76 章节直接 AAR（旧 aar 文件，独立提取）2017-2019 vs 新面板 2003-2016，同为章节级直接口径",
+      "per_chapter": [
+        {
+          "chapter": "A00-B99",
+          "d76_2017_2019_aar_1sd": 1.963,
+          "d76_p": 0.0021,
+          "panel_2003_2016_aar_1sd": 3.813,
+          "panel_p": 0.0001
+        },
+        {
+          "chapter": "C00-D48",
+          "d76_2017_2019_aar_1sd": 0.959,
+          "d76_p": 0.6313,
+          "panel_2003_2016_aar_1sd": 2.262,
+          "panel_p": 0.2945
+        },
+        {
+          "chapter": "D50-D89",
+          "d76_2017_2019_aar_1sd": -0.02,
+          "d76_p": 0.8029,
+          "panel_2003_2016_aar_1sd": 0.176,
+          "panel_p": 0.058
+        },
+        {
+          "chapter": "E00-E88",
+          "d76_2017_2019_aar_1sd": 0.807,
+          "d76_p": 0.3444,
+          "panel_2003_2016_aar_1sd": 0.54,
+          "panel_p": 0.462
+        },
+        {
+          "chapter": "F01-F99",
+          "d76_2017_2019_aar_1sd": -5.002,
+          "d76_p": 0.0004,
+          "panel_2003_2016_aar_1sd": -0.596,
+          "panel_p": 0.5473
+        },
+        {
+          "chapter": "G00-G98",
+          "d76_2017_2019_aar_1sd": 1.666,
+          "d76_p": 0.321,
+          "panel_2003_2016_aar_1sd": -0.881,
+          "panel_p": 0.409
+        },
+        {
+          "chapter": "I00-I99",
+          "d76_2017_2019_aar_1sd": 12.958,
+          "d76_p": 0.0041,
+          "panel_2003_2016_aar_1sd": 15.669,
+          "panel_p": 0.0013
+        },
+        {
+          "chapter": "J00-J98",
+          "d76_2017_2019_aar_1sd": 0.574,
+          "d76_p": 0.7774,
+          "panel_2003_2016_aar_1sd": 0.921,
+          "panel_p": 0.5965
+        },
+        {
+          "chapter": "K00-K92",
+          "d76_2017_2019_aar_1sd": 0.11,
+          "d76_p": 0.8827,
+          "panel_2003_2016_aar_1sd": 0.729,
+          "panel_p": 0.1626
+        },
+        {
+          "chapter": "L00-L98",
+          "d76_2017_2019_aar_1sd": -0.081,
+          "d76_p": 0.1859,
+          "panel_2003_2016_aar_1sd": 0.066,
+          "panel_p": 0.192
+        },
+        {
+          "chapter": "M00-M99",
+          "d76_2017_2019_aar_1sd": -0.333,
+          "d76_p": 0.0022,
+          "panel_2003_2016_aar_1sd": -0.426,
+          "panel_p": 0.001
+        },
+        {
+          "chapter": "N00-N98",
+          "d76_2017_2019_aar_1sd": 1.245,
+          "d76_p": 0.0781,
+          "panel_2003_2016_aar_1sd": 1.735,
+          "panel_p": 0.0164
+        }
+      ],
+      "state_level_corr_I_2016_vs_2017": 0.988,
+      "state_level_mean_gap_I": 0.38
+    },
+    "a_chapter_verdict": {
+      "old_subrow_point": 0.335,
+      "new_chapter_point": 3.813,
+      "new_chapter_se": 0.864,
+      "new_chapter_p": 0.0001,
+      "new_chapter_wls_1sd": 1.524,
+      "in_headline_band": false,
+      "in_mnar_envelope": false,
+      "a_chapter_suppressed_cells": 0,
+      "action": "OUT-OF-BAND — 冻结：只报告 lead，不改头条"
+    },
+    "frozen": true,
+    "frozen_reason": "A 章零屏蔽复验 +3.813/SD 落在头条口径 [+0.22–0.34] 与 MNAR 包络 [+0.218,+0.231] 之外；按 lead 硬边界冻结头条，仅报告不改口径。机制诊断：旧 +0.335 来自'113 子行 AAR 等权均值'代理口径（A 章仅脓毒症/HIV/结核等入选行，非全章死亡加权）+ 子行级 MNAR 屏蔽（20.6%）；新 +3.813 为 WONDER 章节级直接 AAR（零屏蔽），且与 D76 独立提取的章节直接 AAR 互相印证（D76 17-19: +1.963, p=0.002；I 章逐州水平 corr=0.988）。",
+    "ruling": "lead 裁决：选项 2 升级口径 + 强制审计门（A 章任何可辩护口径失显著/翻号则回退）",
+    "f_chapter_time_varying": {
+      "F_2003_2014_pooled": {
+        "slope_1sd": 0.074,
+        "p": 0.94
+      },
+      "F_2015_2016_pooled": {
+        "slope_1sd": -4.612,
+        "p": 0.0007
+      },
+      "F_2017_2019_pooled_D76": {
+        "slope_1sd": -5.002,
+        "p": 0.0004
+      },
+      "n_sig_years_2003_2014": 0,
+      "n_sig_years_2015_2019": 5,
+      "note": "F 章梯度为时变结构：2003-2014 逐年全部 n.s.，2015 起陡负且跨 D140/D76 两源连续；旧 '全窗最硬 −5.00' 是 D76 三年窗现象，全窗池化被 12 个零年稀释为 −0.596 (n.s.)"
+    },
+    "loo_jackknife": [
+      {
+        "chapter": "A00-B99",
+        "full_slope_1sd": 3.813,
+        "loo_min_1sd": 3.446,
+        "loo_drop_state": "11",
+        "loo_max_1sd": 4.087,
+        "loo_max_state": "06",
+        "sign_flips": 0
+      },
+      {
+        "chapter": "I00-I99",
+        "full_slope_1sd": 15.669,
+        "loo_min_1sd": 13.38,
+        "loo_drop_state": "28",
+        "loo_max_1sd": 17.673,
+        "loo_max_state": "35",
+        "sign_flips": 0
+      },
+      {
+        "chapter": "N00-N98",
+        "full_slope_1sd": 1.735,
+        "loo_min_1sd": 1.374,
+        "loo_drop_state": "22",
+        "loo_max_1sd": 2.06,
+        "loo_max_state": "04",
+        "sign_flips": 0
+      },
+      {
+        "chapter": "F01-F99",
+        "full_slope_1sd": -0.596,
+        "loo_min_1sd": -1.041,
+        "loo_drop_state": "38",
+        "loo_max_1sd": -0.207,
+        "loo_max_state": "06",
+        "sign_flips": 0
+      },
+      {
+        "chapter": "M00-M99",
+        "full_slope_1sd": -0.426,
+        "loo_min_1sd": -0.498,
+        "loo_drop_state": "35",
+        "loo_max_1sd": -0.366,
+        "loo_max_state": "49",
+        "sign_flips": 0
+      }
+    ],
+    "relative_gradient_pct": [
+      {
+        "chapter": "A00-B99",
+        "relative_gradient_ols_pct": 18.4,
+        "relative_gradient_wls_pct": 7.3
+      },
+      {
+        "chapter": "C00-D48",
+        "relative_gradient_ols_pct": 1.3,
+        "relative_gradient_wls_pct": -2.2
+      },
+      {
+        "chapter": "D50-D89",
+        "relative_gradient_ols_pct": 5.8,
+        "relative_gradient_wls_pct": -3.8
+      },
+      {
+        "chapter": "E00-E88",
+        "relative_gradient_ols_pct": 1.7,
+        "relative_gradient_wls_pct": -0.4
+      },
+      {
+        "chapter": "F01-F99",
+        "relative_gradient_ols_pct": -1.8,
+        "relative_gradient_wls_pct": -9.8
+      },
+      {
+        "chapter": "G00-G98",
+        "relative_gradient_ols_pct": -2.0,
+        "relative_gradient_wls_pct": -0.8
+      },
+      {
+        "chapter": "I00-I99",
+        "relative_gradient_ols_pct": 6.3,
+        "relative_gradient_wls_pct": 2.2
+      },
+      {
+        "chapter": "J00-J98",
+        "relative_gradient_ols_pct": 1.2,
+        "relative_gradient_wls_pct": -2.0
+      },
+      {
+        "chapter": "K00-K92",
+        "relative_gradient_ols_pct": 2.6,
+        "relative_gradient_wls_pct": 1.2
+      },
+      {
+        "chapter": "L00-L98",
+        "relative_gradient_ols_pct": 5.1,
+        "relative_gradient_wls_pct": -3.7
+      },
+      {
+        "chapter": "M00-M99",
+        "relative_gradient_ols_pct": -10.0,
+        "relative_gradient_wls_pct": -9.1
+      },
+      {
+        "chapter": "N00-N98",
+        "relative_gradient_ols_pct": 8.9,
+        "relative_gradient_wls_pct": -3.0
+      }
+    ],
+    "proxy_vs_direct": [
+      {
+        "chapter": "A00-B99",
+        "proxy_slope_1sd": 0.335,
+        "proxy_wls": 0.161,
+        "proxy_aar_mean": 1.63,
+        "proxy_window": "2003-2016 (D140 子行)",
+        "proxy_suppressed_share": 0.2064,
+        "direct_slope_1sd": 3.813,
+        "direct_wls": 1.524,
+        "direct_aar_mean": 20.77,
+        "level_ratio_direct_over_proxy": 12.7
+      },
+      {
+        "chapter": "C00-D48",
+        "proxy_slope_1sd": 0.959,
+        "proxy_wls": -4.049,
+        "proxy_aar_mean": 152.96,
+        "proxy_window": "2017-2019 (D76)",
+        "proxy_suppressed_share": 0.0,
+        "direct_slope_1sd": 2.262,
+        "direct_wls": -3.881,
+        "direct_aar_mean": 177.08,
+        "level_ratio_direct_over_proxy": 1.2
+      },
+      {
+        "chapter": "D50-D89",
+        "proxy_slope_1sd": 0.04,
+        "proxy_wls": -0.086,
+        "proxy_aar_mean": 1.48,
+        "proxy_window": "2003-2016 (D140 子行)",
+        "proxy_suppressed_share": 0.07,
+        "direct_slope_1sd": 0.176,
+        "direct_wls": -0.116,
+        "direct_aar_mean": 3.04,
+        "level_ratio_direct_over_proxy": 2.1
+      },
+      {
+        "chapter": "E00-E88",
+        "proxy_slope_1sd": -0.336,
+        "proxy_wls": -0.714,
+        "proxy_aar_mean": 10.5,
+        "proxy_window": "2003-2016 (D140 子行)",
+        "proxy_suppressed_share": 0.2923,
+        "direct_slope_1sd": 0.54,
+        "direct_wls": -0.122,
+        "direct_aar_mean": 31.8,
+        "level_ratio_direct_over_proxy": 3.0
+      },
+      {
+        "chapter": "F01-F99",
+        "proxy_slope_1sd": -5.002,
+        "proxy_wls": -8.544,
+        "proxy_aar_mean": 33.5,
+        "proxy_window": "2017-2019 (D76)",
+        "proxy_suppressed_share": 0.0,
+        "direct_slope_1sd": -0.596,
+        "direct_wls": -3.24,
+        "direct_aar_mean": 33.13,
+        "level_ratio_direct_over_proxy": 1.0
+      },
+      {
+        "chapter": "G00-G98",
+        "proxy_slope_1sd": -1.005,
+        "proxy_wls": -0.71,
+        "proxy_aar_mean": 12.0,
+        "proxy_window": "2003-2016 (D140 子行)",
+        "proxy_suppressed_share": 0.1657,
+        "direct_slope_1sd": -0.881,
+        "direct_wls": -0.335,
+        "direct_aar_mean": 43.58,
+        "level_ratio_direct_over_proxy": 3.6
+      },
+      {
+        "chapter": "I00-I99",
+        "proxy_slope_1sd": 12.958,
+        "proxy_wls": 2.585,
+        "proxy_aar_mean": 217.08,
+        "proxy_window": "2017-2019 (D76)",
+        "proxy_suppressed_share": 0.0,
+        "direct_slope_1sd": 15.669,
+        "direct_wls": 5.492,
+        "direct_aar_mean": 249.33,
+        "level_ratio_direct_over_proxy": 1.1
+      },
+      {
+        "chapter": "J00-J98",
+        "proxy_slope_1sd": -0.167,
+        "proxy_wls": -0.475,
+        "proxy_aar_mean": 8.21,
+        "proxy_window": "2003-2016 (D140 子行)",
+        "proxy_suppressed_share": 0.2218,
+        "direct_slope_1sd": 0.921,
+        "direct_wls": -1.467,
+        "direct_aar_mean": 74.73,
+        "level_ratio_direct_over_proxy": 9.1
+      },
+      {
+        "chapter": "K00-K92",
+        "proxy_slope_1sd": 0.028,
+        "proxy_wls": 0.141,
+        "proxy_aar_mean": 2.23,
+        "proxy_window": "2003-2016 (D140 子行)",
+        "proxy_suppressed_share": 0.1753,
+        "direct_slope_1sd": 0.729,
+        "direct_wls": 0.332,
+        "direct_aar_mean": 28.14,
+        "level_ratio_direct_over_proxy": 12.6
+      },
+      {
+        "chapter": "L00-L98",
+        "proxy_slope_1sd": -0.081,
+        "proxy_wls": -0.127,
+        "proxy_aar_mean": 1.3,
+        "proxy_window": "2017-2019 (D76)",
+        "proxy_suppressed_share": 0.0196,
+        "direct_slope_1sd": 0.066,
+        "direct_wls": -0.048,
+        "direct_aar_mean": 1.29,
+        "level_ratio_direct_over_proxy": 1.0
+      },
+      {
+        "chapter": "M00-M99",
+        "proxy_slope_1sd": -0.333,
+        "proxy_wls": -0.361,
+        "proxy_aar_mean": 3.59,
+        "proxy_window": "2017-2019 (D76)",
+        "proxy_suppressed_share": 0.0,
+        "direct_slope_1sd": -0.426,
+        "direct_wls": -0.385,
+        "direct_aar_mean": 4.24,
+        "level_ratio_direct_over_proxy": 1.2
+      },
+      {
+        "chapter": "N00-N98",
+        "proxy_slope_1sd": 0.527,
+        "proxy_wls": -0.4,
+        "proxy_aar_mean": 3.8,
+        "proxy_window": "2003-2016 (D140 子行)",
+        "proxy_suppressed_share": 0.4628,
+        "direct_slope_1sd": 1.735,
+        "direct_wls": -0.577,
+        "direct_aar_mean": 19.52,
+        "level_ratio_direct_over_proxy": 5.1
+      }
+    ],
+    "audit_package": "results/chapter_panel_audit_package.md",
+    "writer_narrative": "results/proxy_trap_narrative.md",
+    "year_by_year": [
+      {
+        "chapter": "A00-B99",
+        "year": 2003,
+        "source": "panel",
+        "slope_aar_1sd": 5.046,
+        "p": 0.0003
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2004,
+        "source": "panel",
+        "slope_aar_1sd": 4.738,
+        "p": 0.0005
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2005,
+        "source": "panel",
+        "slope_aar_1sd": 4.95,
+        "p": 0.0002
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2006,
+        "source": "panel",
+        "slope_aar_1sd": 4.699,
+        "p": 0.0002
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2007,
+        "source": "panel",
+        "slope_aar_1sd": 4.374,
+        "p": 0.0001
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2008,
+        "source": "panel",
+        "slope_aar_1sd": 4.297,
+        "p": 0.0001
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2009,
+        "source": "panel",
+        "slope_aar_1sd": 3.957,
+        "p": 0.0001
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2010,
+        "source": "panel",
+        "slope_aar_1sd": 3.511,
+        "p": 0.0
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2011,
+        "source": "panel",
+        "slope_aar_1sd": 3.353,
+        "p": 0.0
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2012,
+        "source": "panel",
+        "slope_aar_1sd": 3.286,
+        "p": 0.0
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2013,
+        "source": "panel",
+        "slope_aar_1sd": 2.92,
+        "p": 0.0
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2014,
+        "source": "panel",
+        "slope_aar_1sd": 2.851,
+        "p": 0.0001
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2015,
+        "source": "panel",
+        "slope_aar_1sd": 2.8,
+        "p": 0.0001
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2016,
+        "source": "panel",
+        "slope_aar_1sd": 2.605,
+        "p": 0.0002
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2017,
+        "source": "D76",
+        "slope_aar_1sd": 2.146,
+        "p": 0.0012
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2018,
+        "source": "D76",
+        "slope_aar_1sd": 2.001,
+        "p": 0.0018
+      },
+      {
+        "chapter": "A00-B99",
+        "year": 2019,
+        "source": "D76",
+        "slope_aar_1sd": 1.742,
+        "p": 0.0073
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2003,
+        "source": "panel",
+        "slope_aar_1sd": 2.563,
+        "p": 0.2277
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2004,
+        "source": "panel",
+        "slope_aar_1sd": 3.273,
+        "p": 0.1563
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2005,
+        "source": "panel",
+        "slope_aar_1sd": 2.327,
+        "p": 0.3053
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2006,
+        "source": "panel",
+        "slope_aar_1sd": 2.471,
+        "p": 0.2628
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2007,
+        "source": "panel",
+        "slope_aar_1sd": 2.096,
+        "p": 0.3553
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2008,
+        "source": "panel",
+        "slope_aar_1sd": 3.189,
+        "p": 0.167
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2009,
+        "source": "panel",
+        "slope_aar_1sd": 2.971,
+        "p": 0.1997
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2010,
+        "source": "panel",
+        "slope_aar_1sd": 1.842,
+        "p": 0.3894
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2011,
+        "source": "panel",
+        "slope_aar_1sd": 1.089,
+        "p": 0.6208
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2012,
+        "source": "panel",
+        "slope_aar_1sd": 2.523,
+        "p": 0.2568
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2013,
+        "source": "panel",
+        "slope_aar_1sd": 2.802,
+        "p": 0.2009
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2014,
+        "source": "panel",
+        "slope_aar_1sd": 1.928,
+        "p": 0.3781
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2015,
+        "source": "panel",
+        "slope_aar_1sd": 1.212,
+        "p": 0.5747
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2016,
+        "source": "panel",
+        "slope_aar_1sd": 1.381,
+        "p": 0.5094
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2017,
+        "source": "D76",
+        "slope_aar_1sd": 0.734,
+        "p": 0.722
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2018,
+        "source": "D76",
+        "slope_aar_1sd": 1.203,
+        "p": 0.5545
+      },
+      {
+        "chapter": "C00-D48",
+        "year": 2019,
+        "source": "D76",
+        "slope_aar_1sd": 0.941,
+        "p": 0.6316
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2003,
+        "source": "panel",
+        "slope_aar_1sd": 0.339,
+        "p": 0.0193
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2004,
+        "source": "panel",
+        "slope_aar_1sd": 0.157,
+        "p": 0.1946
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2005,
+        "source": "panel",
+        "slope_aar_1sd": 0.343,
+        "p": 0.0025
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2006,
+        "source": "panel",
+        "slope_aar_1sd": 0.179,
+        "p": 0.1741
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2007,
+        "source": "panel",
+        "slope_aar_1sd": 0.284,
+        "p": 0.007
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2008,
+        "source": "panel",
+        "slope_aar_1sd": 0.275,
+        "p": 0.0194
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2009,
+        "source": "panel",
+        "slope_aar_1sd": 0.093,
+        "p": 0.4023
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2010,
+        "source": "panel",
+        "slope_aar_1sd": 0.125,
+        "p": 0.1684
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2011,
+        "source": "panel",
+        "slope_aar_1sd": 0.159,
+        "p": 0.0918
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2012,
+        "source": "panel",
+        "slope_aar_1sd": 0.211,
+        "p": 0.0448
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2013,
+        "source": "panel",
+        "slope_aar_1sd": 0.099,
+        "p": 0.3098
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2014,
+        "source": "panel",
+        "slope_aar_1sd": 0.162,
+        "p": 0.112
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2015,
+        "source": "panel",
+        "slope_aar_1sd": 0.007,
+        "p": 0.9399
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2016,
+        "source": "panel",
+        "slope_aar_1sd": 0.03,
+        "p": 0.759
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2017,
+        "source": "D76",
+        "slope_aar_1sd": -0.057,
+        "p": 0.5247
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2018,
+        "source": "D76",
+        "slope_aar_1sd": 0.049,
+        "p": 0.5971
+      },
+      {
+        "chapter": "D50-D89",
+        "year": 2019,
+        "source": "D76",
+        "slope_aar_1sd": -0.072,
+        "p": 0.3697
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2003,
+        "source": "panel",
+        "slope_aar_1sd": 0.386,
+        "p": 0.6747
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2004,
+        "source": "panel",
+        "slope_aar_1sd": 0.844,
+        "p": 0.3806
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2005,
+        "source": "panel",
+        "slope_aar_1sd": 0.587,
+        "p": 0.5021
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2006,
+        "source": "panel",
+        "slope_aar_1sd": 0.634,
+        "p": 0.4197
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2007,
+        "source": "panel",
+        "slope_aar_1sd": 0.26,
+        "p": 0.7473
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2008,
+        "source": "panel",
+        "slope_aar_1sd": 0.448,
+        "p": 0.5504
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2009,
+        "source": "panel",
+        "slope_aar_1sd": 0.672,
+        "p": 0.3854
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2010,
+        "source": "panel",
+        "slope_aar_1sd": 0.862,
+        "p": 0.249
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2011,
+        "source": "panel",
+        "slope_aar_1sd": 0.59,
+        "p": 0.446
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2012,
+        "source": "panel",
+        "slope_aar_1sd": 0.913,
+        "p": 0.2392
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2013,
+        "source": "panel",
+        "slope_aar_1sd": 0.727,
+        "p": 0.371
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2014,
+        "source": "panel",
+        "slope_aar_1sd": 0.202,
+        "p": 0.7988
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2015,
+        "source": "panel",
+        "slope_aar_1sd": -0.05,
+        "p": 0.949
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2016,
+        "source": "panel",
+        "slope_aar_1sd": 0.479,
+        "p": 0.5469
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2017,
+        "source": "D76",
+        "slope_aar_1sd": 0.817,
+        "p": 0.3376
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2018,
+        "source": "D76",
+        "slope_aar_1sd": 0.655,
+        "p": 0.4633
+      },
+      {
+        "chapter": "E00-E88",
+        "year": 2019,
+        "source": "D76",
+        "slope_aar_1sd": 0.951,
+        "p": 0.2887
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2003,
+        "source": "panel",
+        "slope_aar_1sd": 0.524,
+        "p": 0.5234
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2004,
+        "source": "panel",
+        "slope_aar_1sd": 0.673,
+        "p": 0.377
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2005,
+        "source": "panel",
+        "slope_aar_1sd": 0.723,
+        "p": 0.4224
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2006,
+        "source": "panel",
+        "slope_aar_1sd": 0.449,
+        "p": 0.6316
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2007,
+        "source": "panel",
+        "slope_aar_1sd": 0.367,
+        "p": 0.6938
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2008,
+        "source": "panel",
+        "slope_aar_1sd": -0.126,
+        "p": 0.8987
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2009,
+        "source": "panel",
+        "slope_aar_1sd": -0.58,
+        "p": 0.5803
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2010,
+        "source": "panel",
+        "slope_aar_1sd": 0.321,
+        "p": 0.7843
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2011,
+        "source": "panel",
+        "slope_aar_1sd": -0.354,
+        "p": 0.7698
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2012,
+        "source": "panel",
+        "slope_aar_1sd": 0.333,
+        "p": 0.8002
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2013,
+        "source": "panel",
+        "slope_aar_1sd": 0.145,
+        "p": 0.9175
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2014,
+        "source": "panel",
+        "slope_aar_1sd": -1.588,
+        "p": 0.2403
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2015,
+        "source": "panel",
+        "slope_aar_1sd": -4.497,
+        "p": 0.0017
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2016,
+        "source": "panel",
+        "slope_aar_1sd": -4.728,
+        "p": 0.0003
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2017,
+        "source": "D76",
+        "slope_aar_1sd": -4.818,
+        "p": 0.0004
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2018,
+        "source": "D76",
+        "slope_aar_1sd": -4.883,
+        "p": 0.0006
+      },
+      {
+        "chapter": "F01-F99",
+        "year": 2019,
+        "source": "D76",
+        "slope_aar_1sd": -5.304,
+        "p": 0.0004
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2003,
+        "source": "panel",
+        "slope_aar_1sd": -1.702,
+        "p": 0.0827
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2004,
+        "source": "panel",
+        "slope_aar_1sd": -1.19,
+        "p": 0.2056
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2005,
+        "source": "panel",
+        "slope_aar_1sd": -1.204,
+        "p": 0.2268
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2006,
+        "source": "panel",
+        "slope_aar_1sd": -0.879,
+        "p": 0.3796
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2007,
+        "source": "panel",
+        "slope_aar_1sd": -1.755,
+        "p": 0.098
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2008,
+        "source": "panel",
+        "slope_aar_1sd": -1.411,
+        "p": 0.2009
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2009,
+        "source": "panel",
+        "slope_aar_1sd": -1.472,
+        "p": 0.1735
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2010,
+        "source": "panel",
+        "slope_aar_1sd": -1.777,
+        "p": 0.1186
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2011,
+        "source": "panel",
+        "slope_aar_1sd": -1.586,
+        "p": 0.1684
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2012,
+        "source": "panel",
+        "slope_aar_1sd": -1.543,
+        "p": 0.1652
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2013,
+        "source": "panel",
+        "slope_aar_1sd": -1.038,
+        "p": 0.3614
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2014,
+        "source": "panel",
+        "slope_aar_1sd": 0.029,
+        "p": 0.9817
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2015,
+        "source": "panel",
+        "slope_aar_1sd": 1.567,
+        "p": 0.2977
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2016,
+        "source": "panel",
+        "slope_aar_1sd": 1.628,
+        "p": 0.3099
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2017,
+        "source": "D76",
+        "slope_aar_1sd": 1.615,
+        "p": 0.3221
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2018,
+        "source": "D76",
+        "slope_aar_1sd": 1.706,
+        "p": 0.306
+      },
+      {
+        "chapter": "G00-G98",
+        "year": 2019,
+        "source": "D76",
+        "slope_aar_1sd": 1.675,
+        "p": 0.35
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2003,
+        "source": "panel",
+        "slope_aar_1sd": 18.591,
+        "p": 0.0009
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2004,
+        "source": "panel",
+        "slope_aar_1sd": 18.294,
+        "p": 0.0007
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2005,
+        "source": "panel",
+        "slope_aar_1sd": 20.212,
+        "p": 0.0002
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2006,
+        "source": "panel",
+        "slope_aar_1sd": 17.935,
+        "p": 0.0006
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2007,
+        "source": "panel",
+        "slope_aar_1sd": 16.806,
+        "p": 0.0008
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2008,
+        "source": "panel",
+        "slope_aar_1sd": 16.354,
+        "p": 0.0017
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2009,
+        "source": "panel",
+        "slope_aar_1sd": 15.246,
+        "p": 0.0014
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2010,
+        "source": "panel",
+        "slope_aar_1sd": 14.933,
+        "p": 0.002
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2011,
+        "source": "panel",
+        "slope_aar_1sd": 13.75,
+        "p": 0.0023
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2012,
+        "source": "panel",
+        "slope_aar_1sd": 12.88,
+        "p": 0.0048
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2013,
+        "source": "panel",
+        "slope_aar_1sd": 13.414,
+        "p": 0.0034
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2014,
+        "source": "panel",
+        "slope_aar_1sd": 12.943,
+        "p": 0.0044
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2015,
+        "source": "panel",
+        "slope_aar_1sd": 14.063,
+        "p": 0.0024
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2016,
+        "source": "panel",
+        "slope_aar_1sd": 13.943,
+        "p": 0.0027
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2017,
+        "source": "D76",
+        "slope_aar_1sd": 14.096,
+        "p": 0.0021
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2018,
+        "source": "D76",
+        "slope_aar_1sd": 12.341,
+        "p": 0.006
+      },
+      {
+        "chapter": "I00-I99",
+        "year": 2019,
+        "source": "D76",
+        "slope_aar_1sd": 12.438,
+        "p": 0.0061
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2003,
+        "source": "panel",
+        "slope_aar_1sd": 1.57,
+        "p": 0.3695
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2004,
+        "source": "panel",
+        "slope_aar_1sd": 0.593,
+        "p": 0.6911
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2005,
+        "source": "panel",
+        "slope_aar_1sd": 0.562,
+        "p": 0.7435
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2006,
+        "source": "panel",
+        "slope_aar_1sd": 0.749,
+        "p": 0.6605
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2007,
+        "source": "panel",
+        "slope_aar_1sd": 0.999,
+        "p": 0.553
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2008,
+        "source": "panel",
+        "slope_aar_1sd": 0.807,
+        "p": 0.6714
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2009,
+        "source": "panel",
+        "slope_aar_1sd": 1.343,
+        "p": 0.4589
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2010,
+        "source": "panel",
+        "slope_aar_1sd": 1.292,
+        "p": 0.4856
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2011,
+        "source": "panel",
+        "slope_aar_1sd": 0.459,
+        "p": 0.8005
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2012,
+        "source": "panel",
+        "slope_aar_1sd": 0.511,
+        "p": 0.7781
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2013,
+        "source": "panel",
+        "slope_aar_1sd": 0.749,
+        "p": 0.6984
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2014,
+        "source": "panel",
+        "slope_aar_1sd": 1.088,
+        "p": 0.5761
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2015,
+        "source": "panel",
+        "slope_aar_1sd": 0.386,
+        "p": 0.8394
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2016,
+        "source": "panel",
+        "slope_aar_1sd": 1.789,
+        "p": 0.3485
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2017,
+        "source": "D76",
+        "slope_aar_1sd": 0.62,
+        "p": 0.7595
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2018,
+        "source": "D76",
+        "slope_aar_1sd": 0.907,
+        "p": 0.6641
+      },
+      {
+        "chapter": "J00-J98",
+        "year": 2019,
+        "source": "D76",
+        "slope_aar_1sd": 0.193,
+        "p": 0.9241
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2003,
+        "source": "panel",
+        "slope_aar_1sd": 0.951,
+        "p": 0.0582
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2004,
+        "source": "panel",
+        "slope_aar_1sd": 1.002,
+        "p": 0.0233
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2005,
+        "source": "panel",
+        "slope_aar_1sd": 1.005,
+        "p": 0.0278
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2006,
+        "source": "panel",
+        "slope_aar_1sd": 1.073,
+        "p": 0.0293
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2007,
+        "source": "panel",
+        "slope_aar_1sd": 0.804,
+        "p": 0.1538
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2008,
+        "source": "panel",
+        "slope_aar_1sd": 0.842,
+        "p": 0.124
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2009,
+        "source": "panel",
+        "slope_aar_1sd": 0.793,
+        "p": 0.0851
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2010,
+        "source": "panel",
+        "slope_aar_1sd": 0.643,
+        "p": 0.2078
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2011,
+        "source": "panel",
+        "slope_aar_1sd": 0.367,
+        "p": 0.5288
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2012,
+        "source": "panel",
+        "slope_aar_1sd": 0.857,
+        "p": 0.1384
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2013,
+        "source": "panel",
+        "slope_aar_1sd": 0.402,
+        "p": 0.5146
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2014,
+        "source": "panel",
+        "slope_aar_1sd": 0.779,
+        "p": 0.2404
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2015,
+        "source": "panel",
+        "slope_aar_1sd": 0.359,
+        "p": 0.6239
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2016,
+        "source": "panel",
+        "slope_aar_1sd": 0.326,
+        "p": 0.6555
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2017,
+        "source": "D76",
+        "slope_aar_1sd": 0.308,
+        "p": 0.6786
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2018,
+        "source": "D76",
+        "slope_aar_1sd": 0.295,
+        "p": 0.6881
+      },
+      {
+        "chapter": "K00-K92",
+        "year": 2019,
+        "source": "D76",
+        "slope_aar_1sd": -0.272,
+        "p": 0.7388
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2003,
+        "source": "panel",
+        "slope_aar_1sd": 0.253,
+        "p": 0.0066
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2004,
+        "source": "panel",
+        "slope_aar_1sd": 0.15,
+        "p": 0.0329
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2005,
+        "source": "panel",
+        "slope_aar_1sd": 0.187,
+        "p": 0.0083
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2006,
+        "source": "panel",
+        "slope_aar_1sd": 0.184,
+        "p": 0.0045
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2007,
+        "source": "panel",
+        "slope_aar_1sd": 0.15,
+        "p": 0.0063
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2008,
+        "source": "panel",
+        "slope_aar_1sd": 0.147,
+        "p": 0.006
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2009,
+        "source": "panel",
+        "slope_aar_1sd": 0.123,
+        "p": 0.0333
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2010,
+        "source": "panel",
+        "slope_aar_1sd": 0.043,
+        "p": 0.4018
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2011,
+        "source": "panel",
+        "slope_aar_1sd": -0.071,
+        "p": 0.1215
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2012,
+        "source": "panel",
+        "slope_aar_1sd": -0.001,
+        "p": 0.98
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2013,
+        "source": "panel",
+        "slope_aar_1sd": 0.015,
+        "p": 0.7755
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2014,
+        "source": "panel",
+        "slope_aar_1sd": 0.027,
+        "p": 0.5552
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2015,
+        "source": "panel",
+        "slope_aar_1sd": 0.051,
+        "p": 0.3174
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2016,
+        "source": "panel",
+        "slope_aar_1sd": -0.062,
+        "p": 0.2577
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2017,
+        "source": "D76",
+        "slope_aar_1sd": -0.043,
+        "p": 0.437
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2018,
+        "source": "D76",
+        "slope_aar_1sd": -0.085,
+        "p": 0.1982
+      },
+      {
+        "chapter": "L00-L98",
+        "year": 2019,
+        "source": "D76",
+        "slope_aar_1sd": -0.101,
+        "p": 0.1421
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2003,
+        "source": "panel",
+        "slope_aar_1sd": -0.408,
+        "p": 0.0083
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2004,
+        "source": "panel",
+        "slope_aar_1sd": -0.349,
+        "p": 0.0402
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2005,
+        "source": "panel",
+        "slope_aar_1sd": -0.585,
+        "p": 0.0003
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2006,
+        "source": "panel",
+        "slope_aar_1sd": -0.395,
+        "p": 0.0103
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2007,
+        "source": "panel",
+        "slope_aar_1sd": -0.49,
+        "p": 0.001
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2008,
+        "source": "panel",
+        "slope_aar_1sd": -0.379,
+        "p": 0.0095
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2009,
+        "source": "panel",
+        "slope_aar_1sd": -0.342,
+        "p": 0.0201
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2010,
+        "source": "panel",
+        "slope_aar_1sd": -0.584,
+        "p": 0.0007
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2011,
+        "source": "panel",
+        "slope_aar_1sd": -0.436,
+        "p": 0.0083
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2012,
+        "source": "panel",
+        "slope_aar_1sd": -0.536,
+        "p": 0.0017
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2013,
+        "source": "panel",
+        "slope_aar_1sd": -0.435,
+        "p": 0.0003
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2014,
+        "source": "panel",
+        "slope_aar_1sd": -0.261,
+        "p": 0.0368
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2015,
+        "source": "panel",
+        "slope_aar_1sd": -0.331,
+        "p": 0.0019
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2016,
+        "source": "panel",
+        "slope_aar_1sd": -0.439,
+        "p": 0.0005
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2017,
+        "source": "D76",
+        "slope_aar_1sd": -0.347,
+        "p": 0.0044
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2018,
+        "source": "D76",
+        "slope_aar_1sd": -0.388,
+        "p": 0.001
+      },
+      {
+        "chapter": "M00-M99",
+        "year": 2019,
+        "source": "D76",
+        "slope_aar_1sd": -0.264,
+        "p": 0.0319
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2003,
+        "source": "panel",
+        "slope_aar_1sd": 1.932,
+        "p": 0.0164
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2004,
+        "source": "panel",
+        "slope_aar_1sd": 1.915,
+        "p": 0.0112
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2005,
+        "source": "panel",
+        "slope_aar_1sd": 2.283,
+        "p": 0.0051
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2006,
+        "source": "panel",
+        "slope_aar_1sd": 2.148,
+        "p": 0.0053
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2007,
+        "source": "panel",
+        "slope_aar_1sd": 2.244,
+        "p": 0.0038
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2008,
+        "source": "panel",
+        "slope_aar_1sd": 2.015,
+        "p": 0.0077
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2009,
+        "source": "panel",
+        "slope_aar_1sd": 1.922,
+        "p": 0.0077
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2010,
+        "source": "panel",
+        "slope_aar_1sd": 1.886,
+        "p": 0.0112
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2011,
+        "source": "panel",
+        "slope_aar_1sd": 1.453,
+        "p": 0.0424
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2012,
+        "source": "panel",
+        "slope_aar_1sd": 1.446,
+        "p": 0.043
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2013,
+        "source": "panel",
+        "slope_aar_1sd": 1.407,
+        "p": 0.0542
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2014,
+        "source": "panel",
+        "slope_aar_1sd": 1.169,
+        "p": 0.1075
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2015,
+        "source": "panel",
+        "slope_aar_1sd": 1.243,
+        "p": 0.0924
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2016,
+        "source": "panel",
+        "slope_aar_1sd": 1.225,
+        "p": 0.0977
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2017,
+        "source": "D76",
+        "slope_aar_1sd": 1.291,
+        "p": 0.0692
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2018,
+        "source": "D76",
+        "slope_aar_1sd": 1.281,
+        "p": 0.0888
+      },
+      {
+        "chapter": "N00-N98",
+        "year": 2019,
+        "source": "D76",
+        "slope_aar_1sd": 1.163,
+        "p": 0.0868
+      }
+    ]
+  }
+}
