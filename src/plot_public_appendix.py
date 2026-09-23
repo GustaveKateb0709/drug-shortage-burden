@@ -1,6 +1,6 @@
 """
-plot_public_appendix.py — Redraw English appendix figures A1 / A5 / A3 for the
-Health Policy submission package, from saved result files (no re-estimation).
+plot_public_appendix.py — Redraw English appendix figures A1 / A5 / A3 from saved
+result files (no re-estimation).
 
 Outputs (PNG + LZW-compressed TIFF, 300 dpi) to 04_Code_and_Data/figures_public/:
   Appendix_Figure_A1.png/.tif  — TBD share by posting cohort (orange bars)
