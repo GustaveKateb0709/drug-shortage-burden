@@ -1,6 +1,6 @@
 """
-plot_public_figs_b.py — Redraw English final figures for the Health Policy
-submission package, from saved result files (no re-estimation):
+plot_public_figs_b.py — Redraw English final figures from saved result files
+(no re-estimation):
 
   Figure_2.png/.tif            (2160x1020) exposure / burden / gradient panel
   Appendix_Figure_A2.png/.tif  (2160x810)  stock-age composition, 3 panels
